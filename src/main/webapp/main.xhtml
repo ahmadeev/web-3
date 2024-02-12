@@ -4,7 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
    <h:body>
 
       <ui:composition template="/template.xhtml">
@@ -127,6 +128,7 @@
 
                     <div class="formLine">
                         <h:inputText id="RType" value="#{validate.r}"></h:inputText>
+                        <p:slider for="RType" minValue="1.0" maxValue="4.0" step="0.25" />
                     </div>
 
                     <div class="formLine">
