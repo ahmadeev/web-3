@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+   <title>web practice #3</title>
+   <link rel="icon" href="resources/images/icon.png" type="image/png"/>
+   <h:outputStylesheet name="template.css" library="css" />
+   <h:outputScript name="clock.js" library="js" />
+</h:head>
+
+<h:body>
+
+   <div id="container">
+
+      <div id="header">
+         <ui:insert name="header" >
+            <ui:include src="/template/templHeader.xhtml" />
+         </ui:insert>
+      </div>
+
+      <div id="content">
+         <ui:insert name="content" >
+            <ui:include src="/template/templContent.xhtml" />
+         </ui:insert>
+      </div>
+
+      <div id="footer">
+         <ui:insert name="footer" >
+            <ui:include src="/template/templFooter.xhtml" />
+         </ui:insert>
+      </div>
+
+   </div>
+
+
+</h:body>
+
+</html>

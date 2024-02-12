@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+   <h:body>
+
+      <ui:composition template="/template.xhtml">
+
+         <ui:define name="content">
+            <div id="rightContent">
+
+                  <!--<div class="formLine">
+                     <h:inputText maxlength="10" value="#{validate.y}" decimalSeparator=".">
+                        <f:validateDoubleRange minimum="-3" maximum="3"/>
+                     </h:inputText>
+                  </div>-->
+
+
+                <h:form>
+
+<!--                    <div class="formLine">
+
+                        <h:commandButton value="-5" type="button" >
+                            <f:ajax render="output" listener="#{validate.setX(-5)}"/>
+                        </h:commandButton>
+
+                        <h:commandButton value="-4" type="button" >
+                            <f:ajax render="output" listener="#{validate.setX(-4)}"/>
+                        </h:commandButton>
+
+                        <h:commandButton value="-3" type="button" >
+                            <f:ajax render="output" listener="#{validate.setX(-3)}"/>
+                        </h:commandButton>
+
+                        <h:commandButton value="-2" type="button" >
+                            <f:ajax render="output" listener="#{validate.setX(-2)}"/>
+                        </h:commandButton>
+
+                        <h:commandButton value="-1" type="button" >
+                            <f:ajax render="output" listener="#{validate.setX(-1)}"/>
+                        </h:commandButton>
+
+                        <h:commandButton value="0" type="button" >
+                            <f:ajax render="output" listener="#{validate.setX(0)}"/>
+                        </h:commandButton>
+
+                        <h:commandButton value="1" type="button" >
+                            <f:ajax render="output" listener="#{validate.setX(1)}"/>
+                        </h:commandButton>
+
+                        <h:commandButton value="2" type="button" >
+                            <f:ajax render="output" listener="#{validate.setX(2)}"/>
+                        </h:commandButton>
+
+                        <h:commandButton value="3" type="button" >
+                            <f:ajax render="output" listener="#{validate.setX(3)}"/>
+                        </h:commandButton>
+
+                    </div>
+
+                    <div class="formLine">
+                        <h:inputText id="yType"
+                                     value="#{validate.y}"></h:inputText>
+                    </div>
+
+                    <div class="formLine">
+                        <h:inputText id="RType"
+                                     value="#{validate.r}"></h:inputText>
+                    </div>-->
+
+                    <div class="formLine">
+                        <h:inputHidden id="xType" value="#{validate.x}"></h:inputHidden>
+                    </div>
+
+                    <div class="formLine">
+
+                        <h:commandButton value="-5" type="button" >
+                            <f:ajax render="xType" listener="#{validate.setX(-5)}"/>
+                        </h:commandButton>
+
+                        <h:commandButton value="-4" type="button" >
+                            <f:ajax render="xType" listener="#{validate.setX(-4)}"/>
+                        </h:commandButton>
+
+                        <h:commandButton value="-3" type="button" >
+                            <f:ajax render="xType" listener="#{validate.setX(-3)}"/>
+                        </h:commandButton>
+
+                        <h:commandButton value="-2" type="button" >
+                            <f:ajax render="xType" listener="#{validate.setX(-2)}"/>
+                        </h:commandButton>
+
+                        <h:commandButton value="-1" type="button" >
+                            <f:ajax render="xType" listener="#{validate.setX(-1)}"/>
+                        </h:commandButton>
+
+                        <h:commandButton value="0" type="button" >
+                            <f:ajax render="xType" listener="#{validate.setX(0)}"/>
+                        </h:commandButton>
+
+                        <h:commandButton value="1" type="button" >
+                            <f:ajax render="xType" listener="#{validate.setX(1)}"/>
+                        </h:commandButton>
+
+                        <h:commandButton value="2" type="button" >
+                            <f:ajax render="xType" listener="#{validate.setX(2)}"/>
+                        </h:commandButton>
+
+                        <h:commandButton value="3" type="button" >
+                            <f:ajax render="xType" listener="#{validate.setX(3)}"/>
+                        </h:commandButton>
+
+                        <h:commandButton value="654" type="button" >
+                            <f:ajax render="xType" listener="#{validate.setX(654)}"/>
+                        </h:commandButton>
+
+                    </div>
+
+
+
+                    <div class="formLine">
+                        <h:inputText id="yType" value="#{validate.y}"></h:inputText>
+                    </div>
+
+                    <div class="formLine">
+                        <h:inputText id="RType" value="#{validate.r}"></h:inputText>
+                    </div>
+
+                    <div class="formLine">
+                        <h:commandButton value="submit">
+                            <f:ajax execute="xType yType RType" render="output" />
+                        </h:commandButton>
+
+                        <h:commandButton value="reset" type="reset">
+<!--                            <f:ajax execute="xType yType RType" render="output" />-->
+                        </h:commandButton>
+                    </div>
+
+                </h:form>
+
+            </div>
+            <div id="leftContent">
+                <h2>
+                    <h:outputText id="output"
+                                  value="#{validate.coords}" />
+                </h2>
+            </div>
+         </ui:define>
+
+         <ui:define name="footer">
+            <h:link value="start page" outcome="toStart"/>
+         </ui:define>
+
+      </ui:composition>
+
+   </h:body>
+</html>
