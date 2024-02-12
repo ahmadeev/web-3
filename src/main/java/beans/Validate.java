@@ -5,7 +5,7 @@ import jakarta.faces.bean.ManagedBean;
 import jakarta.faces.bean.SessionScoped;
 
 @ManagedBean(name = "validate", eager = true)
-@SessionScoped
+@RequestScoped
 public class Validate {
     private int x;
     private double y;

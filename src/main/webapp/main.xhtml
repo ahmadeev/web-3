@@ -13,64 +13,7 @@
          <ui:define name="content">
             <div id="rightContent">
 
-                  <!--<div class="formLine">
-                     <h:inputText maxlength="10" value="#{validate.y}" decimalSeparator=".">
-                        <f:validateDoubleRange minimum="-3" maximum="3"/>
-                     </h:inputText>
-                  </div>-->
-
-
                 <h:form>
-
-<!--                    <div class="formLine">
-
-                        <h:commandButton value="-5" type="button" >
-                            <f:ajax render="output" listener="#{validate.setX(-5)}"/>
-                        </h:commandButton>
-
-                        <h:commandButton value="-4" type="button" >
-                            <f:ajax render="output" listener="#{validate.setX(-4)}"/>
-                        </h:commandButton>
-
-                        <h:commandButton value="-3" type="button" >
-                            <f:ajax render="output" listener="#{validate.setX(-3)}"/>
-                        </h:commandButton>
-
-                        <h:commandButton value="-2" type="button" >
-                            <f:ajax render="output" listener="#{validate.setX(-2)}"/>
-                        </h:commandButton>
-
-                        <h:commandButton value="-1" type="button" >
-                            <f:ajax render="output" listener="#{validate.setX(-1)}"/>
-                        </h:commandButton>
-
-                        <h:commandButton value="0" type="button" >
-                            <f:ajax render="output" listener="#{validate.setX(0)}"/>
-                        </h:commandButton>
-
-                        <h:commandButton value="1" type="button" >
-                            <f:ajax render="output" listener="#{validate.setX(1)}"/>
-                        </h:commandButton>
-
-                        <h:commandButton value="2" type="button" >
-                            <f:ajax render="output" listener="#{validate.setX(2)}"/>
-                        </h:commandButton>
-
-                        <h:commandButton value="3" type="button" >
-                            <f:ajax render="output" listener="#{validate.setX(3)}"/>
-                        </h:commandButton>
-
-                    </div>
-
-                    <div class="formLine">
-                        <h:inputText id="yType"
-                                     value="#{validate.y}"></h:inputText>
-                    </div>
-
-                    <div class="formLine">
-                        <h:inputText id="RType"
-                                     value="#{validate.r}"></h:inputText>
-                    </div>-->
 
                     <div class="formLine">
                         <h:inputHidden id="xType" value="#{validate.x}"></h:inputHidden>
@@ -123,11 +66,14 @@
 
 
                     <div class="formLine">
-                        <h:inputText id="yType" value="#{validate.y}"></h:inputText>
+                        <h:inputText id="yType" value="#{validate.y}" style="width:150px"></h:inputText>
                     </div>
 
                     <div class="formLine">
-                        <h:inputText id="RType" value="#{validate.r}"></h:inputText>
+                        <h:inputText id="RType" value="#{validate.r}" style="width:150px">
+                            <f:validateDoubleRange minimum="1.0" maximum="4.0"/>
+                        </h:inputText>
+
                         <p:slider for="RType" minValue="1.0" maxValue="4.0" step="0.25" style="width:150px" />
                     </div>
 
@@ -149,6 +95,7 @@
                     <h:outputText id="output"
                                   value="#{validate.coords}" />
                 </h2>
+
             </div>
          </ui:define>
 
