@@ -144,10 +144,10 @@
 
              <div id="centerContent">
                  <h2>
-                     <h:outputText id="output"
-                                   value="#{shot.coords}" />
+                     <h:outputText id="output" value="#{shot.coords}" />
                  </h2>
              </div>
+             <script src="resources/js/dot.js"></script>
          </ui:define>
 
          <ui:define name="footer">
@@ -156,5 +156,6 @@
 
       </ui:composition>
 
+<!--       <h:outputScript name="dot.js" library="js" target="head" />-->
    </h:body>
 </html>
