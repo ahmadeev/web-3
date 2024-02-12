@@ -83,7 +83,7 @@ h2 {
     color: rgba(0, 0, 0, 0);*/
     background: aliceblue;
     line-height: 50px;
-    height: 300px;
+    height: auto;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -103,6 +103,21 @@ h2 {
     width: 50%;
     height: 300px;
     float:right;
+    background-color: rgba(255, 228, 181, 0);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#centerContent {
+    width: 100%;
+    height:auto;
     background-color: rgba(255, 228, 181, 0);
 
     display: flex;

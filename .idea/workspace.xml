@@ -10,11 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="meow">
-      <change afterPath="$PROJECT_DIR$/src/main/java/beans/ShotValidation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/beans/Results.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/beans/Validate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/Shot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/beans/Shot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/Shot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/beans/ShotValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/ShotValidation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/template.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/template.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +141,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1707707185009</updated>
-      <workItem from="1707707186346" duration="6609000" />
+      <workItem from="1707707186346" duration="11916000" />
     </task>
     <task id="LOCAL-00001" summary="meow">
       <option name="closed" value="true" />
@@ -183,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707711508251</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="meow">
+      <option name="closed" value="true" />
+      <created>1707714145209</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707714145209</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

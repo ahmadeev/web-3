@@ -61,8 +61,10 @@ public class Shot {
 
     public String getCoords() {
 
-        if (shotValidation.checkShot(x, y, R)) {return "" + x + "; " + decimalTransform(y, 2) + "; " + decimalTransform(R, 2);}
-        else return "ошибка валидации";
+        if (shotValidation.checkShot(x, y, R)) {
+            return ("{\"x\": " + x + ", \"y\": " + y + ", \"R\": " + R + ", \"isHit\": " + shotValidation.isInside(x, y, R) + "}");
+        }
+        else return "validation error";
     }
 
     /*public String getCoords() {
