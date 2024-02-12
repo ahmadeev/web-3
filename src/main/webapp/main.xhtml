@@ -16,49 +16,49 @@
                 <h:form>
 
                     <div class="formLine">
-                        <h:inputHidden id="xType" value="#{validate.x}"></h:inputHidden>
+                        <h:inputHidden id="xType" value="#{shot.x}"></h:inputHidden>
                     </div>
 
                     <div class="formLine">
 
                         <h:commandButton value="-5" type="button" >
-                            <f:ajax render="xType" listener="#{validate.setX(-5)}"/>
+                            <f:ajax render="xType" listener="#{shot.setX(-5)}"/>
                         </h:commandButton>
 
                         <h:commandButton value="-4" type="button" >
-                            <f:ajax render="xType" listener="#{validate.setX(-4)}"/>
+                            <f:ajax render="xType" listener="#{shot.setX(-4)}"/>
                         </h:commandButton>
 
                         <h:commandButton value="-3" type="button" >
-                            <f:ajax render="xType" listener="#{validate.setX(-3)}"/>
+                            <f:ajax render="xType" listener="#{shot.setX(-3)}"/>
                         </h:commandButton>
 
                         <h:commandButton value="-2" type="button" >
-                            <f:ajax render="xType" listener="#{validate.setX(-2)}"/>
+                            <f:ajax render="xType" listener="#{shot.setX(-2)}"/>
                         </h:commandButton>
 
                         <h:commandButton value="-1" type="button" >
-                            <f:ajax render="xType" listener="#{validate.setX(-1)}"/>
+                            <f:ajax render="xType" listener="#{shot.setX(-1)}"/>
                         </h:commandButton>
 
                         <h:commandButton value="0" type="button" >
-                            <f:ajax render="xType" listener="#{validate.setX(0)}"/>
+                            <f:ajax render="xType" listener="#{shot.setX(0)}"/>
                         </h:commandButton>
 
                         <h:commandButton value="1" type="button" >
-                            <f:ajax render="xType" listener="#{validate.setX(1)}"/>
+                            <f:ajax render="xType" listener="#{shot.setX(1)}"/>
                         </h:commandButton>
 
                         <h:commandButton value="2" type="button" >
-                            <f:ajax render="xType" listener="#{validate.setX(2)}"/>
+                            <f:ajax render="xType" listener="#{shot.setX(2)}"/>
                         </h:commandButton>
 
                         <h:commandButton value="3" type="button" >
-                            <f:ajax render="xType" listener="#{validate.setX(3)}"/>
+                            <f:ajax render="xType" listener="#{shot.setX(3)}"/>
                         </h:commandButton>
 
                         <h:commandButton value="654" type="button" >
-                            <f:ajax render="xType" listener="#{validate.setX(654)}"/>
+                            <f:ajax render="xType" listener="#{shot.setX(654)}"/>
                         </h:commandButton>
 
                     </div>
@@ -66,13 +66,13 @@
 
 
                     <div class="formLine">
-                        <h:inputText id="yType" value="#{validate.y}" style="width:150px">
+                        <h:inputText id="yType" value="#{shot.y}" style="width:150px">
                             <f:validateDoubleRange minimum="-3.0" maximum="3.0"/>
                         </h:inputText>
                     </div>
 
                     <div class="formLine">
-                        <h:inputText id="RType" value="#{validate.r}" style="width:150px">
+                        <h:inputText id="RType" value="#{shot.r}" style="width:150px">
                             <f:validateDoubleRange minimum="1.0" maximum="4.0"/>
                         </h:inputText>
 
@@ -95,7 +95,7 @@
             <div id="leftContent">
                 <h2>
                     <h:outputText id="output"
-                                  value="#{validate.coords}" />
+                                  value="#{shot.coords}" />
                 </h2>
 
             </div>
