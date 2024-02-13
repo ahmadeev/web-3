@@ -5,7 +5,7 @@ submit.addEventListener("click", function() {
         if (result != "validation error") {
             let json_result = JSON.parse(result)
             drawDot(json_result.x, json_result.y, json_result.R, json_result.isHit)
-        } else (alert('meow'))
+        } else (alert('validation error'))
     }, 200)
 
 })

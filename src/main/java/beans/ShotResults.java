@@ -1,7 +1,7 @@
 package beans;
 
 import jakarta.annotation.PostConstruct;
-import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.faces.bean.ApplicationScoped;
 import jakarta.faces.bean.ManagedBean;
 
 import java.io.Serializable;

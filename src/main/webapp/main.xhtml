@@ -82,7 +82,7 @@
 
                     <div class="formLine">
                         <h:commandButton value="submit">
-                            <f:ajax execute="xType yType RType" render="output" />
+                            <f:ajax execute="xType yType RType" render="output table-results" />
                         </h:commandButton>
 
                         <h:commandButton value="reset" type="reset">
@@ -146,19 +146,39 @@
              <div id="centerContent">
                  <h2>
                      <h:outputText id="output" value="#{shot.coords}" />
-                 </h2>
+                 </h2><br/>
+
+                 <p:dataTable id="table-results" value="#{shotResults.results}" var="shot" sortMode="single"
+                              styleClass="table-results" style="background: dimgray">
+                     <p:column headerText="X">
+                         <h:outputText value="#{shot.x}"/>
+                     </p:column>
+                     <p:column headerText="Y">
+                         <h:outputText value="#{shot.y}"/>
+                     </p:column>
+                     <p:column headerText="R">
+                         <h:outputText value="#{shot.r}"/>
+                     </p:column>
+                     <p:column headerText="Hit?">
+                         <h:outputText value="#{shot.hit}"/>
+                     </p:column>
+                 </p:dataTable>
 
              </div>
-             <script src="resources/js/dot.js"></script>
-             <script src="resources/js/onclick.js"></script>
+
          </ui:define>
 
          <ui:define name="footer">
             <h:link value="start page" outcome="toStart"/>
          </ui:define>
 
+          <ui:define name="scripts">
+              <h:outputScript name="dot.js" library="js" />
+              <h:outputScript name="onclick.js" library="js" />
+              <h:outputScript name="clock.js" library="js" />
+          </ui:define>
+
       </ui:composition>
 
-<!--       <h:outputScript name="dot.js" library="js" target="head" />-->
    </h:body>
 </html>

@@ -26,7 +26,7 @@ public class ShotValidation {
         return availableR;
     }
 
-    public boolean checkShot(int x, double y, double r) {
+    public boolean isValid(int x, double y, double r) {
         if (availableX.contains(x) && availableR.contains(r) && (-3 <= y && y <= 3)) return true;
         else return false;
     }

@@ -29,10 +29,12 @@ public class Shot {
         this.isHit = isHit;
     }
 
-    @PostConstruct
+/*    @PostConstruct
     public void init() {
+        x = 0;
+        y = 0;
         R = 1;
-    }
+    }*/
 
     public int getX() {
         return x;
@@ -96,7 +98,7 @@ public class Shot {
 
     public String getCoords() {
 
-        if (shotValidation.checkShot(x, y, R)) {
+        if (shotValidation.isValid(x, y, R)) {
             Shot shot = new Shot(x, y, R, shotValidation.isInside(x, y, R));
             shotResults.results.add(shot);
             System.out.println(Objects.toString(shotResults.results));

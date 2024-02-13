@@ -9,8 +9,14 @@
 
     <ui:composition template="/template.xhtml">
 
+        <ui:define name="content"></ui:define>
+
         <ui:define name="footer">
             <h:link value="main page" outcome="toMain"/>
+        </ui:define>
+
+        <ui:define name="scripts">
+            <h:outputScript name="clock.js" library="js" />
         </ui:define>
 
     </ui:composition>

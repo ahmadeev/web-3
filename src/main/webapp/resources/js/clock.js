@@ -1,7 +1,9 @@
 window.onload = function(){
+    let now = new Date();
+    let clock = document.getElementById("clock");
+    clock.innerHTML = now.toLocaleTimeString();
     window.setInterval(function(){
-        var now = new Date();
-        var clock = document.getElementById("clock");
+        let now = new Date();
         clock.innerHTML = now.toLocaleTimeString();
-    },1000);
+    },12000);
 };
