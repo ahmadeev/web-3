@@ -10,16 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="meow">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/areaCheck.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/redrawLabels.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/validate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/beans/Shot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/Shot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/beans/ShotResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/ShotResults.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/beans/ShotValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/ShotValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/template.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/template.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/clock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/clock.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/dot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/dot.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/onclick.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/onclick.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/template.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/template.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +148,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1707707185009</updated>
-      <workItem from="1707707186346" duration="30756000" />
+      <workItem from="1707707186346" duration="47864000" />
     </task>
     <task id="LOCAL-00001" summary="meow">
       <option name="closed" value="true" />
@@ -221,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707800932953</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="meow">
+      <option name="closed" value="true" />
+      <created>1707839275767</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1707839275767</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

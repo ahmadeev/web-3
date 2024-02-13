@@ -31,8 +31,6 @@ public class Shot {
 
 /*    @PostConstruct
     public void init() {
-        x = 0;
-        y = 0;
         R = 1;
     }*/
 
@@ -111,6 +109,8 @@ public class Shot {
     /*public String getCoords() {
         return "" + x + "; " + decimalTransform(y, 2) + "; " + decimalTransform(R, 2);
     }*/
+
+    public void sayMeow() { System.out.println("meow"); }
 
     @Override
     public String toString() {

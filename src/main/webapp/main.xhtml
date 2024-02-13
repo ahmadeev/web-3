@@ -21,44 +21,40 @@
 
                     <div class="formLine">
 
-                        <h:commandButton value="-5" type="button" >
+                        <h:commandButton value="-5" type="button" styleClass="button" >
                             <f:ajax render="xType" listener="#{shot.setX(-5)}"/>
                         </h:commandButton>
 
-                        <h:commandButton value="-4" type="button" >
+                        <h:commandButton value="-4" type="button" styleClass="button" >
                             <f:ajax render="xType" listener="#{shot.setX(-4)}"/>
                         </h:commandButton>
 
-                        <h:commandButton value="-3" type="button" >
+                        <h:commandButton value="-3" type="button" styleClass="button" >
                             <f:ajax render="xType" listener="#{shot.setX(-3)}"/>
                         </h:commandButton>
 
-                        <h:commandButton value="-2" type="button" >
+                        <h:commandButton value="-2" type="button" styleClass="button" >
                             <f:ajax render="xType" listener="#{shot.setX(-2)}"/>
                         </h:commandButton>
 
-                        <h:commandButton value="-1" type="button" >
+                        <h:commandButton value="-1" type="button" styleClass="button" >
                             <f:ajax render="xType" listener="#{shot.setX(-1)}"/>
                         </h:commandButton>
 
-                        <h:commandButton value="0" type="button" >
+                        <h:commandButton value="0" type="button" styleClass="button" >
                             <f:ajax render="xType" listener="#{shot.setX(0)}"/>
                         </h:commandButton>
 
-                        <h:commandButton value="1" type="button" >
+                        <h:commandButton value="1" type="button" styleClass="button" >
                             <f:ajax render="xType" listener="#{shot.setX(1)}"/>
                         </h:commandButton>
 
-                        <h:commandButton value="2" type="button" >
+                        <h:commandButton value="2" type="button" styleClass="button" >
                             <f:ajax render="xType" listener="#{shot.setX(2)}"/>
                         </h:commandButton>
 
-                        <h:commandButton value="3" type="button" >
+                        <h:commandButton value="3" type="button" styleClass="button" >
                             <f:ajax render="xType" listener="#{shot.setX(3)}"/>
-                        </h:commandButton>
-
-                        <h:commandButton value="654" type="button" >
-                            <f:ajax render="xType" listener="#{shot.setX(654)}"/>
                         </h:commandButton>
 
                     </div>
@@ -72,21 +68,25 @@
                     </div>
 
                     <div class="formLine">
-                        <h:inputText id="RType" value="#{shot.r}" style="width:150px">
+                        <h:inputText class="slider_input" id="RType" onchange="redrawLabels('2')" value="#{shot.r}" style="width:150px">
                             <f:validateDoubleRange minimum="1.0" maximum="4.0"/>
 
                         </h:inputText>
 
-                        <p:slider class='slider' for="RType" minValue="1.0" maxValue="4.0" step="0.25" style="width:150px" />
+                        <p:slider class='slider' for="RType" display="RType" minValue="1.0" maxValue="4.0" step="0.25" style="width:150px" />
                     </div>
 
                     <div class="formLine">
-                        <h:commandButton value="submit">
-                            <f:ajax execute="xType yType RType" render="output table-results" />
+                        <h:commandButton styleClass="button" value="submit">
+                            <f:ajax execute="xType yType RType" render="output tableResults" />
                         </h:commandButton>
 
-                        <h:commandButton value="reset" type="reset">
-<!--                            <f:ajax execute="xType yType RType" render="output" />-->
+                        <h:commandButton action="#{shotResults.init()}" onclick="resetButton()" styleClass="button" value="reset">
+                            <f:ajax render="tableResults graph" />
+                        </h:commandButton>
+
+                        <h:commandButton action="#{shot.sayMeow}" value="meow" styleClass="button" onclick="sayMeow()">
+                            <f:ajax />
                         </h:commandButton>
                     </div>
 
@@ -95,7 +95,7 @@
             </div>
             <div id="leftContent">
 
-                <svg width="250" height="250">
+                <svg id="graph" width="250" height="250">
                     <g class="x-grid">
                         <line stroke="black" x1="0" x2="250" y1="125" y2="125"></line>
                     </g>
@@ -145,21 +145,21 @@
 
              <div id="centerContent">
                  <h2>
-                     <h:outputText id="output" value="#{shot.coords}" />
+                     <h:inputHidden id="output" value="#{shot.coords}" />
                  </h2><br/>
 
-                 <p:dataTable id="table-results" value="#{shotResults.results}" var="shot" sortMode="single"
-                              styleClass="table-results" style="background: dimgray">
-                     <p:column headerText="X">
+                 <p:dataTable id="tableResults" value="#{shotResults.results}" var="shot" sortMode="single"
+                              styleClass="tableResults" style="margin-bottom: 15px; border-color: black;">
+                     <p:column headerText="X" style="text-align: center">
                          <h:outputText value="#{shot.x}"/>
                      </p:column>
-                     <p:column headerText="Y">
+                     <p:column headerText="Y" style="text-align: center">
                          <h:outputText value="#{shot.y}"/>
                      </p:column>
-                     <p:column headerText="R">
+                     <p:column headerText="R" style="text-align: center">
                          <h:outputText value="#{shot.r}"/>
                      </p:column>
-                     <p:column headerText="Hit?">
+                     <p:column headerText="Hit?" style="text-align: center">
                          <h:outputText value="#{shot.hit}"/>
                      </p:column>
                  </p:dataTable>
@@ -176,6 +176,9 @@
               <h:outputScript name="dot.js" library="js" />
               <h:outputScript name="onclick.js" library="js" />
               <h:outputScript name="clock.js" library="js" />
+              <h:outputScript name="redrawLabels.js" library="js" />
+              <h:outputScript name="validate.js" library="js" />
+              <h:outputScript name="areaCheck.js" library="js" />
           </ui:define>
 
       </ui:composition>

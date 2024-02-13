@@ -110,6 +110,10 @@ h2 {
     justify-content: center;
 }
 
+.button {
+    margin-right: 5px;
+}
+
 h2 {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -123,6 +127,12 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.tableResults {
+    width: 70%;
+    line-height: 10px;
+    text-align: center;
 }
 
 #footer {
