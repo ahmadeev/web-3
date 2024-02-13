@@ -6,7 +6,7 @@ submit.addEventListener("click", function() {
             let json_result = JSON.parse(result)
             drawDot(json_result.x, json_result.y, json_result.R, json_result.isHit)
         } else (alert('meow'))
-    }, 150)
+    }, 200)
 
 })
 

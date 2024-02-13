@@ -1,9 +1,12 @@
 package beans;
 
+import jakarta.annotation.PostConstruct;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.faces.bean.ManagedBean;
 import jakarta.faces.bean.ManagedProperty;
 import jakarta.inject.Inject;
+
+import java.util.Objects;
 
 import static java.util.Objects.isNull;
 
@@ -13,10 +16,23 @@ public class Shot {
     private int x;
     private double y;
     private double R;
+    private boolean isHit;
 
     public Shot() {
         System.out.println("Shot bean started");
     };
+
+    public Shot(int x, double y, double r, boolean isHit) {
+        this.x = x;
+        this.y = y;
+        this.R = r;
+        this.isHit = isHit;
+    }
+
+    @PostConstruct
+    public void init() {
+        R = 1;
+    }
 
     public int getX() {
         return x;
@@ -30,6 +46,10 @@ public class Shot {
         return R;
     }
 
+    public boolean isHit() {
+        return isHit;
+    }
+
     public void setX(int x) {
         this.x = x;
     }
@@ -39,7 +59,11 @@ public class Shot {
     }
 
     public void setR(double r) {
-        R = r;
+        this.R = r;
+    }
+
+    public void setHit(boolean hit) {
+        this.isHit = hit;
     }
 
     private double decimalTransform(double number, double decimals) {
@@ -59,9 +83,24 @@ public class Shot {
         this.shotValidation = shotValidation;
     }
 
+    @ManagedProperty(value = "#{shotResults}")
+    private ShotResults shotResults;
+
+    public ShotResults getShotResults() {
+        return shotResults;
+    }
+
+    public void setShotResults(ShotResults shotResults) {
+        this.shotResults = shotResults;
+    }
+
     public String getCoords() {
 
         if (shotValidation.checkShot(x, y, R)) {
+            Shot shot = new Shot(x, y, R, shotValidation.isInside(x, y, R));
+            shotResults.results.add(shot);
+            System.out.println(Objects.toString(shotResults.results));
+            System.out.println(shot.toString());
             return ("{\"x\": " + x + ", \"y\": " + y + ", \"R\": " + R + ", \"isHit\": " + shotValidation.isInside(x, y, R) + "}");
         }
         else return "validation error";
@@ -70,4 +109,14 @@ public class Shot {
     /*public String getCoords() {
         return "" + x + "; " + decimalTransform(y, 2) + "; " + decimalTransform(R, 2);
     }*/
+
+    @Override
+    public String toString() {
+        return "shot{" +
+                "x=" + x +
+                ", y=" + y +
+                ", r=" + R +
+                ", result=" + isHit +
+                "}";
+    }
 }

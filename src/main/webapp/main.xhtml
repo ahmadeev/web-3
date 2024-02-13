@@ -74,9 +74,10 @@
                     <div class="formLine">
                         <h:inputText id="RType" value="#{shot.r}" style="width:150px">
                             <f:validateDoubleRange minimum="1.0" maximum="4.0"/>
+
                         </h:inputText>
 
-                        <p:slider for="RType" minValue="1.0" maxValue="4.0" step="0.25" style="width:150px" />
+                        <p:slider class='slider' for="RType" minValue="1.0" maxValue="4.0" step="0.25" style="width:150px" />
                     </div>
 
                     <div class="formLine">
@@ -146,8 +147,10 @@
                  <h2>
                      <h:outputText id="output" value="#{shot.coords}" />
                  </h2>
+
              </div>
              <script src="resources/js/dot.js"></script>
+             <script src="resources/js/onclick.js"></script>
          </ui:define>
 
          <ui:define name="footer">
