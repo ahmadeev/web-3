@@ -68,7 +68,7 @@
                     </div>
 
                     <div class="formLine">
-                        <h:inputText class="slider_input" id="RType" onchange="redrawLabels('2')" value="#{shot.r}" style="width:150px">
+                        <h:inputText class="slider_input" id="RType" value="#{shot.r}" style="width:150px">
                             <f:validateDoubleRange minimum="1.0" maximum="4.0"/>
 
                         </h:inputText>
@@ -85,7 +85,7 @@
                             <f:ajax render="tableResults graph" />
                         </h:commandButton>
 
-                        <h:commandButton action="#{shot.sayMeow}" value="meow" styleClass="button" onclick="sayMeow()">
+                        <h:commandButton action="#{shot.sayMeow}" value="meow" styleClass="button meowButton" onclick="sayMeow()">
                             <f:ajax />
                         </h:commandButton>
                     </div>

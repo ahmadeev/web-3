@@ -10,5 +10,9 @@ window.onload = function(){
 
     //  Отрисовка точек после перезагрузки
     drawDots()
+    //  Изменение подписей на графике
+    let rows = document.querySelectorAll('tbody tr')
+    let lastR = (rows[rows.length - 1].querySelectorAll('td'))[2].innerText
+    redrawLabels(lastR)
 
 };

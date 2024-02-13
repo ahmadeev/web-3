@@ -13,6 +13,7 @@ svg.addEventListener('click', (event) => {
         yInput = ((event.clientY - offsetTop - 25) - 125) / (-80 / RInput)
         if (isYValid(yInput) && isRValid(RInput)) {
             alert("x: " + xInput + ", y: " + yInput + ", R: " + RInput + ", Hit: " + (isInside(xInput, yInput, RInput) == true ? 'true' : 'false'))
+
         } else alert('Coordinates are not valid!')
     } else alert('R is not set!')
 })

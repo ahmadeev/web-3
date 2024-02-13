@@ -7,7 +7,7 @@ submit.addEventListener("click", function() {
             drawDot(json_result.x, json_result.y, json_result.R, json_result.isHit)
         } else (alert('validation error'))
     }, 200)
-
+    meow.click()
 })
 
 //alert('meow')
@@ -67,3 +67,5 @@ function sayMeow() {
     audio.autoplay = true; // Автоматически запускаем
 
 }
+
+let meow = document.querySelector('.meowButton')
