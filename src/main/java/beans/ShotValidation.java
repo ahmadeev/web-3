@@ -10,10 +10,6 @@ import java.util.List;
 @ApplicationScoped
 public class ShotValidation {
 
-/*    private final Shot shot = new Shot();
-
-    private final List<Shot> shots = new ArrayList<>();*/
-
     private final List<Integer> availableX = List.of(-5, -4, -3, -2, -1, 0, 1, 2, 3);
 
     private final List<Double> availableR = List.of(1.0, 1.25, 1.5, 1.75, 2.0, 2.25, 2.5, 2.75, 3.0, 3.25, 3.5, 3.75, 4.0);
@@ -26,13 +22,27 @@ public class ShotValidation {
         return availableR;
     }
 
-    public boolean isValid(int x, double y, double r) {
-        if (availableX.contains(x) && availableR.contains(r) && (-3 <= y && y <= 3)) return true;
+    public boolean isValid(double x, double y, double r) {
+        if (isXValid(x) && isYValid(y) && isRValid(r)) return true;
         else return false;
     }
 
-    public boolean isInside(int x, double y, double r) {
-        double xDouble = (int) x;
+    public boolean isXValid(double x) {
+        if (availableX.contains(x)) return true;
+        else return false;
+    }
+
+    public boolean isYValid(double y) {
+        if (y >= -3.0 && y <= 3.0) return true;
+        else return false;
+    }
+
+    public boolean isRValid(double r) {
+        if (availableR.contains(r)) return true;
+        else return false;
+    }
+
+    public boolean isInside(double x, double y, double r) {
         // 2nd
         if ((y >= 0) && (x <= 0)) return (y <= r / 2) && (x >= -r);
         // 3rd

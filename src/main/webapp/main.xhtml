@@ -16,7 +16,7 @@
                 <h:form>
 
                     <div class="formLine">
-                        <h:inputHidden class="text_input_x" id="xType" value="#{shot.x}"></h:inputHidden>
+                        <h:inputHidden id="xType" value="#{shot.x}"></h:inputHidden>
                     </div>
 
                     <div class="formLine">
@@ -62,7 +62,7 @@
 
 
                     <div class="formLine">
-                        <h:inputText class="text_input_y" id="yType" value="#{shot.y}" style="width:150px">
+                        <h:inputText id="yType" value="#{shot.y}" style="width:150px">
                             <f:validateDoubleRange minimum="-3.0" maximum="3.0"/>
                         </h:inputText>
                     </div>
@@ -77,8 +77,8 @@
                     </div>
 
                     <div class="formLine">
-                        <h:commandButton styleClass="button" value="submit">
-                            <f:ajax execute="xType yType RType" render="output tableResults" />
+                        <h:commandButton styleClass="button" value="submit" action="#{shot.getCoords}">
+                            <f:ajax execute="xType yType RType" render="tableResults"/>
                         </h:commandButton>
 
                         <h:commandButton action="#{shotResults.init()}" onclick="resetButton()" styleClass="button" value="reset">
@@ -89,6 +89,28 @@
                             <f:ajax />
                         </h:commandButton>
                     </div>
+
+                </h:form>
+
+                <h:form style="display:none;">
+
+
+                    <h:inputText class="input_x" id="xType-hidden" value="#{shot.x}" style="width:100px">
+                        <f:validateDoubleRange minimum="-5.0" maximum="3.0"/>
+                    </h:inputText>
+
+                    <h:inputText class="input_y" id="yType-hidden" value="#{shot.y}" style="width:100px">
+                        <f:validateDoubleRange minimum="-3.0" maximum="3.0"/>
+                    </h:inputText>
+
+                    <h:inputText class="input_r" id="RType-hidden" value="#{shot.r}" style="width:100px">
+                        <f:validateDoubleRange minimum="1.0" maximum="4.0"/>
+                    </h:inputText>
+
+
+                    <h:commandButton styleClass="button-hidden" action="#{shot.getCoords}">
+                        <f:ajax execute="xType-hidden yType-hidden RType-hidden" render="tableResults" />
+                    </h:commandButton>
 
                 </h:form>
 
@@ -144,9 +166,7 @@
             </div>
 
              <div id="centerContent">
-                 <h2>
-                     <h:inputHidden id="output" value="#{shot.coords}" />
-                 </h2><br/>
+
 
                  <p:dataTable id="tableResults" value="#{shotResults.results}" var="shot" sortMode="single"
                               styleClass="tableResults" style="margin-bottom: 15px; border-color: black;">

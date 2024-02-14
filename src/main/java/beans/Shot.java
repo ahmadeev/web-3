@@ -13,7 +13,7 @@ import static java.util.Objects.isNull;
 @ManagedBean(name = "shot", eager = true)
 @RequestScoped
 public class Shot {
-    private int x;
+    private double x;
     private double y;
     private double R;
     private boolean isHit;
@@ -22,7 +22,7 @@ public class Shot {
         System.out.println("Shot bean started");
     };
 
-    public Shot(int x, double y, double r, boolean isHit) {
+    public Shot(double x, double y, double r, boolean isHit) {
         this.x = x;
         this.y = y;
         this.R = r;
@@ -34,7 +34,7 @@ public class Shot {
         R = 1;
     }*/
 
-    public int getX() {
+    public double getX() {
         return x;
     }
 
@@ -50,7 +50,7 @@ public class Shot {
         return isHit;
     }
 
-    public void setX(int x) {
+    public void setX(double x) {
         this.x = x;
     }
 
@@ -96,7 +96,7 @@ public class Shot {
 
     public String getCoords() {
 
-        if (shotValidation.isValid(x, y, R)) {
+        if (shotValidation.isYValid(y) && shotValidation.isRValid(R)) {
             Shot shot = new Shot(x, y, R, shotValidation.isInside(x, y, R));
             shotResults.results.add(shot);
             System.out.println(Objects.toString(shotResults.results));
@@ -105,10 +105,6 @@ public class Shot {
         }
         else return "validation error";
     }
-
-    /*public String getCoords() {
-        return "" + x + "; " + decimalTransform(y, 2) + "; " + decimalTransform(R, 2);
-    }*/
 
     public void sayMeow() { System.out.println("meow"); }
 

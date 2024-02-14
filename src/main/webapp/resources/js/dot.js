@@ -1,13 +1,11 @@
+setTimeout(function(){}, 750)
+
 let submit = document.querySelector('input[type="submit"]')
 submit.addEventListener("click", function() {
-    setTimeout(function() {
-        let result = document.getElementById("output").value
-        if (result != "validation error") {
-            let json_result = JSON.parse(result)
-            drawDot(json_result.x, json_result.y, json_result.R, json_result.isHit, true)
-        } else (alert('validation error'))
-    }, 200)
-    // meow.click()
+    const rows = document.querySelectorAll('tbody tr')
+    const cells = rows[rows.length - 1].querySelectorAll('td')
+    drawDot(parseFloat(cells[0].innerHTML), parseFloat(cells[1].innerHTML), parseFloat(cells[2].innerHTML), (cells[3].innerHTML == 'true' ? true : false), true)
+    //alert('' + parseFloat(cells[0].innerHTML) + parseFloat(cells[1].innerHTML) + parseFloat(cells[2].innerHTML) + cells[3].innerHTML)
 })
 
 function drawDot(x, y, R, isHit, isEqual) {
