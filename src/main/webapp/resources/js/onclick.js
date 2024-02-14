@@ -14,6 +14,11 @@ svg.addEventListener('click', (event) => {
         if (isYValid(yInput) && isRValid(RInput)) {
             alert("x: " + xInput + ", y: " + yInput + ", R: " + RInput + ", Hit: " + (isInside(xInput, yInput, RInput) == true ? 'true' : 'false'))
 
+/*            document.querySelector('.text_input_x').value = xInput
+            document.querySelector('.text_input_y').value = yInput
+            document.querySelector('.slider_input').value = RInput
+            submit.click()*/
+
         } else alert('Coordinates are not valid!')
     } else alert('R is not set!')
 })

@@ -6,9 +6,13 @@ const pos_half_R = document.querySelectorAll('.half_R')
 const slider = document.querySelector('.slider')
 const RInput = document.querySelector('.slider_input')
 
-slider.addEventListener('mouseover', function() {
-    redrawLabels(RInput.value)
-})
+"mousemove touchmove click mouseover mouseout mousedown mouseup".split(" ").forEach(function(e){
+    slider.addEventListener(e, function () {
+        redrawLabels(RInput.value)
+        clearDots()
+        drawDots(parseFloat(RInput.value))
+    });
+});
 
 function redrawLabels(r) {
     if (parseFloat(r) == 0 || r == null) {return}

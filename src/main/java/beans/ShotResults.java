@@ -12,12 +12,6 @@ import java.util.ArrayList;
 public class ShotResults implements Serializable {
     protected ArrayList<Shot> results;
 
-/*    public void removeResults() {
-        System.out.println("www");
-        results = new ArrayList<>();
-        System.out.println("zzz");
-    }*/
-
     public ShotResults() {
         System.out.println("Shot results bean started!");
     }
