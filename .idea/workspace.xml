@@ -10,10 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="meow">
+      <change afterPath="$PROJECT_DIR$/src/main/java/beans/DBHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/beans/Shot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/Shot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/dot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/dot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/beans/ShotResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/ShotResults.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +26,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="jsf" />
-        <option value="Class" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -66,8 +68,6 @@
 }]]></component>
   <component name="RunManager">
     <configuration name="JBoss/WildFly 24.0.0.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 24.0.0.Final" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
-      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="primefacestest:war exploded">
           <settings />
@@ -83,7 +83,7 @@
       </server-settings>
       <predefined_log_file enabled="true" id="JBoss" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="46469" />
+        <option name="DEBUG_PORT" value="7834" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -147,7 +147,7 @@
       <option name="presentableId" value="Default" />
       <updated>1707707185009</updated>
       <workItem from="1707707186346" duration="74466000" />
-      <workItem from="1708001920858" duration="1466000" />
+      <workItem from="1708001920858" duration="13385000" />
     </task>
     <task id="LOCAL-00001" summary="meow">
       <option name="closed" value="true" />
@@ -277,7 +277,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707974808798</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="meow">
+      <option name="closed" value="true" />
+      <created>1708003696494</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1708003696494</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
