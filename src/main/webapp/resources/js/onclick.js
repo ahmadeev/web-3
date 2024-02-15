@@ -1,5 +1,3 @@
-// setTimeout(function(){}, 750)
-
 let svg = document.querySelector('svg')
 
 let div = document.querySelector("#leftContent")
@@ -12,19 +10,7 @@ window.onresize = function(){
     offsetTop = div.offsetTop
 }
 
-let observer = new MutationObserver(function() {meow()})
-// let table = document.querySelector('table')
-
-
-
-/*$(document).on( "click", "tr", function() {
-    alert( "click happened" );
-});*/
-
-/*$(document).on( "DOMSubtreeModified", "tr", function() {
-/!*    alert( "New ROW ADDED" );*!/
-    meow()
-});*/
+let observer = new MutationObserver(function() {drawDotFromLastRow()})
 
 svg.addEventListener('click', (event) => {
 
@@ -51,22 +37,20 @@ svg.addEventListener('click', (event) => {
             document.querySelector('.input_r').value = RInput
             document.querySelector('.button-hidden').click()
 
-            meow()
-
         } else alert('Coordinates are not valid!' + ' (x: ' + xInput.toFixed(2) + ', y: ' + yInput.toFixed(2) + ', R: ' + RInput.toFixed(2) + ')')
     } else alert('R is not set!')
 })
 
-function meow() {
-    // alert('sex')
+function drawDotFromLastRow() {
+
     let rows = document.querySelectorAll('tbody tr')
     let cells = rows[rows.length - 1].querySelectorAll('td')
 
     let x = parseFloat(cells[0].innerHTML)
     let y = parseFloat(cells[1].innerHTML)
     let r = parseFloat(cells[2].innerHTML)
+    let isHit = cells[3].innerHTML == 'true' ? true : false
 
-    drawDot(x, y, r, (cells[3].innerHTML == 'true' ? true : false), true)
+    drawDot(x, y, r, isHit, true)
 
-    // alert(x + " " + y + " " + r)
 }
