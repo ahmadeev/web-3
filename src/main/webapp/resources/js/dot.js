@@ -1,21 +1,10 @@
 let submit = document.querySelector('.form_submit_button')
 submit.addEventListener("click", function() {
-    //alert('meow')
-/*
-    let rows = document.querySelectorAll('tbody tr')
-    let cells = rows[rows.length - 1].querySelectorAll('td')
-    alert('' + parseFloat(cells[0].innerHTML) + ' ' + parseFloat(cells[1].innerHTML) + ' ' +  parseFloat(cells[2].innerHTML))
-    drawDot(parseFloat(cells[0].innerHTML), parseFloat(cells[1].innerHTML), parseFloat(cells[2].innerHTML), (cells[3].innerHTML == 'true' ? true : false), true)
-*/
 
-/*    let x = document.querySelector(".form_input_x").value
-    let y = document.querySelector(".form_input_y").value
-    let r = document.querySelector(".slider_input").value
-    if (isValid(x, y, r)) drawDot(x, y, r, isInside(x, y, r), true)*/
-
-    const RInput = document.querySelector('.slider_input')
-    clearDots()
-    drawDots(parseFloat(RInput.value))
+    observer.observe(document.querySelector('#centerContent'), {
+        childList : true,
+        subtree: true
+    })
 })
 
 let reset = document.querySelector('.form_reset_button')
