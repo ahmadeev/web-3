@@ -66,7 +66,7 @@ public class Shot {
         this.isHit = hit;
     }
 
-    private double decimalTransform(double number, double decimals) {
+    private double decimalTransform(double number, int decimals) {
         double scale = Math.pow(10, decimals);
         number = Math.ceil(number * scale) / scale;
         return number;
@@ -97,11 +97,11 @@ public class Shot {
     public String getCoords() {
 
         if (shotValidation.isYValid(y) && shotValidation.isRValid(R)) {
-            Shot shot = new Shot(x, y, R, shotValidation.isInside(x, y, R));
+            Shot shot = new Shot(decimalTransform(x, 2), decimalTransform(y, 2), decimalTransform(R, 2), shotValidation.isInside(x, y, R));
             shotResults.results.add(shot);
             System.out.println(Objects.toString(shotResults.results));
             System.out.println(shot.toString());
-            return ("{\"x\": " + x + ", \"y\": " + y + ", \"R\": " + R + ", \"isHit\": " + shotValidation.isInside(x, y, R) + "}");
+            return ("{\"x\": " + decimalTransform(x, 2) + ", \"y\": " + decimalTransform(y, 2) + ", \"R\": " + decimalTransform(R, 2) + ", \"isHit\": " + shotValidation.isInside(x, y, R) + "}");
         }
         else return "validation error";
     }

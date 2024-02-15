@@ -1,10 +1,17 @@
 let submit = document.querySelector('.form_submit_button')
 submit.addEventListener("click", function() {
 
-    observer.observe(document.querySelector('#centerContent'), {
-        childList : true,
-        subtree: true
-    })
+    let xInput = parseFloat(document.querySelector('.formLine input').value)
+    let yInput = parseFloat(document.querySelector('.form_input_y').value)
+    let RInput = parseFloat(document.querySelector('.slider_input').value)
+
+    if (isValid(xInput, yInput, RInput)) {
+        observer.observe(document.querySelector('#centerContent'), {
+            childList : true,
+            subtree: true
+        })
+    } else alert('Coordinates are not valid!' + ' (x: ' + xInput.toFixed(2) + ', y: ' + yInput.toFixed(2) + ', R: ' + RInput.toFixed(2) + ')')
+
 })
 
 let reset = document.querySelector('.form_reset_button')

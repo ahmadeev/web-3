@@ -26,6 +26,12 @@
     </dependency>
 
     <dependency>
+      <groupId>org.eclipse.persistence</groupId>
+      <artifactId>org.eclipse.persistence.jpa</artifactId>
+      <version>3.0.2</version>
+    </dependency>
+
+    <dependency>
       <groupId>org.primefaces</groupId>
       <artifactId>primefaces</artifactId>
       <version>12.0.0</version>
