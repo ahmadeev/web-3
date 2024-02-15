@@ -16,7 +16,7 @@
                 <h:form>
 
                     <div class="formLine">
-                        <h:inputHidden id="xType" value="#{shot.x}"></h:inputHidden>
+                        <h:inputHidden class="form_input_x" id="xType" value="#{shot.x}"></h:inputHidden>
                     </div>
 
                     <div class="formLine">
@@ -62,7 +62,7 @@
 
 
                     <div class="formLine">
-                        <h:inputText id="yType" value="#{shot.y}" style="width:150px">
+                        <h:inputText class="form_input_y" id="yType" value="#{shot.y}" style="width:150px">
                             <f:validateDoubleRange minimum="-3.0" maximum="3.0"/>
                         </h:inputText>
                     </div>
@@ -77,12 +77,12 @@
                     </div>
 
                     <div class="formLine">
-                        <h:commandButton styleClass="button" value="submit" action="#{shot.getCoords}">
-                            <f:ajax execute="xType yType RType" render="tableResults"/>
+                        <h:commandButton styleClass="button form_submit_button" value="submit" type="submit">
+                            <f:ajax execute="xType yType RType" render="output tableResults"/>
                         </h:commandButton>
 
-                        <h:commandButton action="#{shotResults.init()}" onclick="resetButton()" styleClass="button" value="reset">
-                            <f:ajax render="tableResults graph" />
+                        <h:commandButton action="#{shotResults.init}" styleClass="button form_reset_button" value="reset">
+                            <f:ajax />
                         </h:commandButton>
 
                         <h:commandButton action="#{shot.sayMeow}" value="meow" styleClass="button meowButton" onclick="sayMeow()">
@@ -108,11 +108,12 @@
                     </h:inputText>
 
 
-                    <h:commandButton styleClass="button-hidden" action="#{shot.getCoords}">
-                        <f:ajax execute="xType-hidden yType-hidden RType-hidden" render="tableResults" />
+                    <h:commandButton styleClass="button-hidden" type="submit">
+                        <f:ajax execute="xType-hidden yType-hidden RType-hidden" render="output tableResults" />
                     </h:commandButton>
 
                 </h:form>
+
 
             </div>
             <div id="leftContent">
@@ -167,6 +168,9 @@
 
              <div id="centerContent">
 
+                 <h2>
+                     <h:inputHidden id="output" value="#{shot.coords}" />
+                 </h2><br/>
 
                  <p:dataTable id="tableResults" value="#{shotResults.results}" var="shot" sortMode="single"
                               styleClass="tableResults" style="margin-bottom: 15px; border-color: black;">

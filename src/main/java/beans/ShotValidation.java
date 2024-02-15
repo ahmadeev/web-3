@@ -2,12 +2,13 @@ package beans;
 
 import jakarta.faces.bean.ApplicationScoped;
 import jakarta.faces.bean.ManagedBean;
+import jakarta.faces.bean.SessionScoped;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @ManagedBean(name="shotValidation")
-@ApplicationScoped
+@SessionScoped
 public class ShotValidation {
 
     private final List<Integer> availableX = List.of(-5, -4, -3, -2, -1, 0, 1, 2, 3);

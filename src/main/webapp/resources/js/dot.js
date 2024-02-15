@@ -1,12 +1,25 @@
-setTimeout(function(){}, 750)
-
-let submit = document.querySelector('input[type="submit"]')
+let submit = document.querySelector('.form_submit_button')
 submit.addEventListener("click", function() {
-    const rows = document.querySelectorAll('tbody tr')
-    const cells = rows[rows.length - 1].querySelectorAll('td')
+    //alert('meow')
+/*
+    let rows = document.querySelectorAll('tbody tr')
+    let cells = rows[rows.length - 1].querySelectorAll('td')
+    alert('' + parseFloat(cells[0].innerHTML) + ' ' + parseFloat(cells[1].innerHTML) + ' ' +  parseFloat(cells[2].innerHTML))
     drawDot(parseFloat(cells[0].innerHTML), parseFloat(cells[1].innerHTML), parseFloat(cells[2].innerHTML), (cells[3].innerHTML == 'true' ? true : false), true)
-    //alert('' + parseFloat(cells[0].innerHTML) + parseFloat(cells[1].innerHTML) + parseFloat(cells[2].innerHTML) + cells[3].innerHTML)
+*/
+
+/*    let x = document.querySelector(".form_input_x").value
+    let y = document.querySelector(".form_input_y").value
+    let r = document.querySelector(".slider_input").value
+    if (isValid(x, y, r)) drawDot(x, y, r, isInside(x, y, r), true)*/
+
+    const RInput = document.querySelector('.slider_input')
+    clearDots()
+    drawDots(parseFloat(RInput.value))
 })
+
+let reset = document.querySelector('.form_reset_button')
+reset.addEventListener("click", resetButton)
 
 function drawDot(x, y, R, isHit, isEqual) {
     let svg = document.querySelector('svg')
@@ -45,10 +58,10 @@ function resetButton() {
     rows.forEach(row => {row.remove()})
 
     for(let i=0; i<2; i++) {
-        svg1[i].childNodes[0].nodeValue = '-R'
-        svg2[i].childNodes[0].nodeValue = '-R/2'
-        svg3[i].childNodes[0].nodeValue = 'R'
-        svg4[i].childNodes[0].nodeValue = 'R/2'
+        neg_R[i].childNodes[0].nodeValue = '-R'
+        neg_half_R[i].childNodes[0].nodeValue = '-R/2'
+        pos_R[i].childNodes[0].nodeValue = 'R'
+        pos_half_R[i].childNodes[0].nodeValue = 'R/2'
     }
 
 }
