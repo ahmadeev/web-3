@@ -23,6 +23,7 @@ public class Shot {
         this.x = shot.x;
         this.y = shot.y;
         this.R = shot.R;
+        this.isHit = shot.isHit;
     }
 
     public Shot(double x, double y, double r, boolean isHit) {
