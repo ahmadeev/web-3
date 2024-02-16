@@ -79,15 +79,15 @@
                     </div>
 
                     <div class="formLine">
-                        <h:commandButton styleClass="button form_submit_button" value="submit" action="#{shotController.getManageRequest}">
+                        <h:commandButton styleClass="form_submit_button button" value="submit" action="#{shotController.getManageRequest}">
                             <f:ajax execute="xType yType RType" render="tableResults"/>
                         </h:commandButton>
 
-                        <h:commandButton action="#{shotResults.init}" styleClass="button form_reset_button" value="reset">
+                        <h:commandButton action="#{shotResults.init}" styleClass="form_reset_button button " value="reset">
                             <f:ajax />
                         </h:commandButton>
 
-                        <h:commandButton action="#{shotController.sayMeow}" value="meow" styleClass="button meowButton" onclick="sayMeow()">
+                        <h:commandButton action="#{shotController.sayMeow}" value="meow" styleClass="meowButton button" onclick="sayMeow()">
                             <f:ajax />
                         </h:commandButton>
                     </div>

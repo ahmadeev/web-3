@@ -17,5 +17,10 @@ window.onload = function(){
     redrawLabels(lastR)
     drawDots(parseFloat(lastR))
 
+    document.querySelector('.slider').addEventListener("mousedown", recursive)
 
+    function recursive() {
+        addEventListeners("mousemove touchmove click mouseover mouseout mousedown mouseup", slider)
+        document.querySelector('.slider').removeEventListener("mousedown", recursive)
+    }
 };
