@@ -144,6 +144,10 @@ h2 {
     text-align: center;
 }
 
+tr:hover > td {
+    background-color: #e6d4c3;
+}
+
 #footer {
     width: 100%;
 /*    font: 16px sans-serif;
