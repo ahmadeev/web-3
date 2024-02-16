@@ -1,15 +1,8 @@
 package beans;
 
-import jakarta.faces.bean.ApplicationScoped;
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.SessionScoped;
-
-import java.util.ArrayList;
 import java.util.List;
 
-@ManagedBean(name="shotValidation")
-@SessionScoped
-public class ShotValidation {
+public class ShotHandler {
 
     private final List<Integer> availableX = List.of(-5, -4, -3, -2, -1, 0, 1, 2, 3);
 
@@ -24,23 +17,19 @@ public class ShotValidation {
     }
 
     public boolean isValid(double x, double y, double r) {
-        if (isXValid(x) && isYValid(y) && isRValid(r)) return true;
-        else return false;
+        return isXValid(x) && isYValid(y) && isRValid(r);
     }
 
     public boolean isXValid(double x) {
-        if (availableX.contains(x)) return true;
-        else return false;
+        return availableX.contains(x);
     }
 
     public boolean isYValid(double y) {
-        if (y >= -3.0 && y <= 3.0) return true;
-        else return false;
+        return y >= -3.0 && y <= 3.0;
     }
 
     public boolean isRValid(double r) {
-        if (availableR.contains(r)) return true;
-        else return false;
+        return availableR.contains(r);
     }
 
     public boolean isInside(double x, double y, double r) {

@@ -10,20 +10,17 @@ import java.util.ArrayList;
 @ManagedBean(name = "shotResults", eager = true)
 @SessionScoped
 public class ShotResults implements Serializable {
-    protected ArrayList<Shot> results;
+    private ArrayList<Shot> results;
+//    private double lastSentR = 1.0;
 
     public ShotResults() {
         System.out.println("Shot results bean started!");
     }
 
-/*    public void removeDots() {
-        results = new ArrayList<>();
-        System.out.println("очистился");
-    }*/
-
     @PostConstruct
     public void init() {
         results = new ArrayList<>();
+//        lastSentR = 1.0;
         System.out.println("очистился");
     }
 
@@ -35,4 +32,14 @@ public class ShotResults implements Serializable {
         this.results = results;
     }
 
+/*    // установка последнего значения R на слайдере
+    public double getLastSentR() {
+        System.out.println(lastSentR);
+        return lastSentR;
+    }
+
+    public void setLastSentR(double lastSentR) {
+        this.lastSentR = lastSentR;
+        System.out.println(lastSentR);
+    }*/
 }

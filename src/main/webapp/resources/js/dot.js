@@ -36,6 +36,7 @@ function drawDot(x, y, R, isHit, isEqual) {
 }
 
 function drawDots(lastR) {
+
     const rows = document.querySelectorAll('tbody tr')
     rows.forEach((row) => {
         if (row != null) {
@@ -53,11 +54,18 @@ function resetButton() {
     const rows = document.querySelectorAll('tbody tr');
     rows.forEach(row => {row.remove()})
 
-    for(let i=0; i<2; i++) {
+/*    for(let i=0; i<2; i++) {
         neg_R[i].childNodes[0].nodeValue = '-R'
         neg_half_R[i].childNodes[0].nodeValue = '-R/2'
         pos_R[i].childNodes[0].nodeValue = 'R'
         pos_half_R[i].childNodes[0].nodeValue = 'R/2'
+    }*/
+
+    for(let i=0; i<2; i++) {
+        neg_R[i].childNodes[0].nodeValue = '-1.0'
+        neg_half_R[i].childNodes[0].nodeValue = '-0.5'
+        pos_R[i].childNodes[0].nodeValue = '1.0'
+        pos_half_R[i].childNodes[0].nodeValue = '0.5'
     }
 
 }

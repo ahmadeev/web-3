@@ -114,6 +114,15 @@ h2 {
     margin-right: 5px;
 }
 
+.button_block {
+    line-height: 30px;
+}
+
+.input_x_button {
+    width: 26px;
+    height: 26px;
+}
+
 h2 {
     margin-top: 0px;
     margin-bottom: 0px;
