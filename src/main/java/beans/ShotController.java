@@ -5,8 +5,6 @@ import jakarta.faces.bean.ManagedBean;
 import jakarta.faces.bean.ManagedProperty;
 import jakarta.inject.Inject;
 
-import static java.util.Objects.isNull;
-
 @ManagedBean
 @RequestScoped
 public class ShotController {
@@ -17,9 +15,6 @@ public class ShotController {
 
     @Inject
     private DBHandler dbHandler;
-
-/*    @Inject
-    private ShotResults shotResults;*/
 
     @ManagedProperty(value = "#{shotResults}")
     private ShotResults shotResults;
@@ -51,20 +46,17 @@ public class ShotController {
         double x = shot.getX();
         double y = shot.getY();
         double r = shot.getR();
+        boolean isHit = shotHandler.isInside(x, y, r);
         if (shotHandler.isYValid(y) && shotHandler.isRValid(r)) {
-            Shot newShot = new Shot(decimalTransform(x, 2), decimalTransform(y, 2), decimalTransform(r, 2), shotHandler.isInside(x, y, r));
+            Shot newShot = new Shot(decimalTransform(x, 2), decimalTransform(y, 2), decimalTransform(r, 2), isHit);
 
             System.out.println(newShot.toString());
 
             shotResults.getResults().add(newShot); //актульно при private
             System.out.println(shotResults.getResults()); //актульно при private
-//            shotResults.results.add(newShot); // акутально при protected
-//            System.out.println(shotResults.results); // акутально при protected
 
-            dbHandler.create(shot);
+            dbHandler.create(newShot);
 //            shotResults.setLastSentR(r); // установка последнего значения R на слайдере
-
-
 
         } else System.out.println("ошибка");
 

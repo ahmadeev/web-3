@@ -10,15 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="работает, но дальше эксперименты">
-      <change afterPath="$PROJECT_DIR$/src/main/java/beans/ShotController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/beans/Shot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/Shot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/beans/ShotResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/ShotResults.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/beans/ShotValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/ShotHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/template.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/template.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/clock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/clock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/dot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/dot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/beans/ShotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/ShotController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +143,7 @@
       <option name="presentableId" value="Default" />
       <updated>1707707185009</updated>
       <workItem from="1707707186346" duration="74466000" />
-      <workItem from="1708001920858" duration="23792000" />
+      <workItem from="1708001920858" duration="24285000" />
     </task>
     <task id="LOCAL-00001" summary="meow">
       <option name="closed" value="true" />
@@ -297,7 +289,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708037625812</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="работает, но дальше эксперименты">
+      <option name="closed" value="true" />
+      <created>1708047309387</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1708047309387</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
