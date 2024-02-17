@@ -4,15 +4,15 @@ import jakarta.persistence.*;
 
 @Entity
 public class Shot {
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @Column(nullable = false)
+    @Column(name = "x", nullable = false)
     private double x;
-    @Column(nullable = false)
+    @Column(name = "y", nullable = false)
     private double y;
-    @Column(nullable = false)
+    @Column(name = "r", nullable = false)
     private double R;
-    @Column(nullable = false)
+    @Column(name = "hit", nullable = false)
     private boolean isHit;
 
     public Shot() {

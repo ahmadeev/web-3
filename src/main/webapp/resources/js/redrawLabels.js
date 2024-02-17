@@ -3,11 +3,9 @@ const neg_half_R = document.querySelectorAll('.min_half_R')
 const pos_R = document.querySelectorAll('.R')
 const pos_half_R = document.querySelectorAll('.half_R')
 
-const slider = document.querySelector('.slider')
-const RInput = document.querySelector('.slider_input')
-
 function addEventListeners(types, element) {
     try {
+        const RInput = document.querySelector('.slider_input')
         types.split(" ").forEach(function(e){
             element.addEventListener(e, function () {
                 redrawLabels(RInput.value)
@@ -29,4 +27,10 @@ function redrawLabels(r) {
         neg_half_R[i].childNodes[0].nodeValue = "-" + (r / 2).toString()
         pos_half_R[i].childNodes[0].nodeValue = (r / 2).toString()
     }
+}
+
+function recursive() {
+    const slider = document.querySelector('.slider')
+    addEventListeners("mousemove touchmove click mouseover mouseout mousedown mouseup", slider)
+    slider.removeEventListener("mousedown", recursive)
 }

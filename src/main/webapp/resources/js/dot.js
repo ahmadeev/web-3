@@ -17,10 +17,13 @@ submit.addEventListener("click", function() {
 let reset = document.querySelector('.form_reset_button')
 reset.addEventListener("click", resetButton)
 
+const zero_to_R_offset = 80
+const svg_size_parameter = 250
+
 function drawDot(x, y, R, isHit, isEqual) {
     let svg = document.querySelector('svg')
-    x += 80 * x / R + 125
-    y += -80 * y / R + 125
+    x += zero_to_R_offset * x / R + (svg_size_parameter / 2)
+    y += -zero_to_R_offset * y / R + (svg_size_parameter / 2)
 
     const dot = document.createElementNS("http://www.w3.org/2000/svg", 'circle')
     dot.setAttributeNS(null, 'cx', x);

@@ -51,6 +51,7 @@ body {
 /*    font: 16px sans-serif;
     color: rgba(0, 0, 0, 0);*/
     background: aliceblue;
+/*    background: #1b1b1b;*/
     line-height: 50px;
     height: 100px;
     text-align: center;
@@ -59,6 +60,8 @@ body {
 
 h2 {
     margin-bottom: 0px;
+    /*text-shadow: #adadad 0px 3px;*/
+    text-shadow: 1px 1px 2px #adadad;
 }
 
 #devName {
@@ -130,6 +133,7 @@ h2 {
     margin-right: 5px;
     background: white;
     border-width: 1px ;
+    height: 26px;
 }
 
 

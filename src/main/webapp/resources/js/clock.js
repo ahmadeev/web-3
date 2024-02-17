@@ -9,18 +9,18 @@ window.onload = function(){
     },12000);
 
 
+
+
+    const slider = document.querySelector('.slider')
+    slider.addEventListener("mousedown", recursive)
+
     //  Отрисовка точек после перезагрузки
     //  Изменение подписей на графике
-    let rows = document.querySelectorAll('tbody tr')
-    let lastR = (rows[rows.length - 1].querySelectorAll('td'))[2].innerText
+    try {
+        let rows = document.querySelectorAll('tbody tr')
+        let lastR = (rows[rows.length - 1].querySelectorAll('td'))[2].innerText
 
-    redrawLabels(lastR)
-    drawDots(parseFloat(lastR))
-
-    document.querySelector('.slider').addEventListener("mousedown", recursive)
-
-    function recursive() {
-        addEventListeners("mousemove touchmove click mouseover mouseout mousedown mouseup", slider)
-        document.querySelector('.slider').removeEventListener("mousedown", recursive)
-    }
+        redrawLabels(lastR)
+        drawDots(parseFloat(lastR))
+    } finally {}
 };
