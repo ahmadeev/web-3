@@ -8,9 +8,6 @@ window.onload = function(){
         clock.innerHTML = now.toLocaleTimeString();
     },12000);
 
-
-
-
     const slider = document.querySelector('.slider')
     slider.addEventListener("mousedown", recursive)
 

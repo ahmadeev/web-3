@@ -3,6 +3,7 @@ package beans;
 import jakarta.annotation.PostConstruct;
 import jakarta.faces.bean.SessionScoped;
 import jakarta.faces.bean.ManagedBean;
+import jakarta.inject.Inject;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -11,7 +12,9 @@ import java.util.ArrayList;
 @SessionScoped
 public class ShotResults implements Serializable {
     private ArrayList<Shot> results;
-//    private double lastSentR = 1.0;
+
+    @Inject
+    private DBHandler dbHandler;
 
     public ShotResults() {
         System.out.println("Shot results bean started!");
@@ -20,8 +23,8 @@ public class ShotResults implements Serializable {
     @PostConstruct
     public void init() {
         results = new ArrayList<>();
-//        lastSentR = 1.0;
-        System.out.println("очистился");
+        dbHandler.resetTable();
+        System.out.println("Инициализация бина ShotResults (с очисткой результатов)");
     }
 
     public ArrayList<Shot> getResults() {
@@ -32,14 +35,4 @@ public class ShotResults implements Serializable {
         this.results = results;
     }
 
-/*    // установка последнего значения R на слайдере
-    public double getLastSentR() {
-        System.out.println(lastSentR);
-        return lastSentR;
-    }
-
-    public void setLastSentR(double lastSentR) {
-        this.lastSentR = lastSentR;
-        System.out.println(lastSentR);
-    }*/
 }

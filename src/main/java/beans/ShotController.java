@@ -28,7 +28,7 @@ public class ShotController {
     }
 
     public ShotController() {
-        System.out.println("я начал");
+        System.out.println("Shot controller bean started!");
         shot.setX(0);
         shot.setY(0);
         shot.setR(1.0);
@@ -52,13 +52,13 @@ public class ShotController {
 
             System.out.println(newShot.toString());
 
-            shotResults.getResults().add(newShot); //актульно при private
-            System.out.println(shotResults.getResults()); //актульно при private
+            shotResults.getResults().add(newShot);
+            System.out.println(shotResults.getResults());
 
             dbHandler.create(newShot);
-//            shotResults.setLastSentR(r); // установка последнего значения R на слайдере
 
-        } else System.out.println("ошибка");
+
+        } else System.out.println("Неправильные входные данные!");
 
     }
 
