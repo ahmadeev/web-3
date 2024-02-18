@@ -68,7 +68,7 @@ public class ShotController {
         return number;
     }
 
-    public void sayMeow() {
+/*    public void sayMeow() {
         System.out.println("meow");
-    }
+    }*/
 }

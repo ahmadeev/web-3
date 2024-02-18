@@ -78,12 +78,12 @@ function clearDots() {
     dots.forEach(dot => {dot.remove()})
 }
 
-function sayMeow() {
+/*function sayMeow() {
 
     let audio = new Audio(); // Создаём новый элемент Audio
     audio.src = 'resources/audio/meow.mp3'; // Указываем путь к звуку "клика"
     audio.autoplay = true; // Автоматически запускаем
 
-}
+}*/
 
 // let meow = document.querySelector('.meowButton')

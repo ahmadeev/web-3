@@ -15,9 +15,9 @@
 
                 <h:form>
 
-                    <div class="formLine">
+<!--                    <div class="formLine">
                         <h:inputText class="form_input_x" id="xType" value="#{shotController.shot.x}"></h:inputText>
-                    </div>
+                    </div>-->
 
                     <div class="formLine">
 
@@ -32,7 +32,9 @@
 
                             <h:commandButton value="-3" type="button" styleClass="button input_x_button" >
                                 <f:ajax render="xType" listener="#{shotController.shot.setX(-3)}"/>
-                            </h:commandButton><br/>
+                            </h:commandButton>
+
+                            <h:inputText class="form_input_x" id="xType" value="#{shotController.shot.x}" style="height: 90px; width: 50px; float:right"></h:inputText><br/>
 
                             <h:commandButton value="-2" type="button" styleClass="button input_x_button" >
                                 <f:ajax render="xType" listener="#{shotController.shot.setX(-2)}"/>
@@ -79,7 +81,7 @@
                     </div>
 
                     <div class="formLine">
-                        <h:commandButton styleClass="form_submit_button button" value="submit" action="#{shotController.getManageRequest}">
+                        <h:commandButton styleClass="form_submit_button button" value="check" action="#{shotController.getManageRequest}">
                             <f:ajax execute="xType yType RType" render="tableResults"/>
                         </h:commandButton>
 
@@ -87,9 +89,7 @@
                             <f:ajax />
                         </h:commandButton>
 
-                        <h:commandButton action="#{shotController.sayMeow}" value="meow" styleClass="meowButton button" onclick="sayMeow()">
-                            <f:ajax />
-                        </h:commandButton>
+
                     </div>
 
                 </h:form>

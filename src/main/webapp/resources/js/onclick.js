@@ -41,7 +41,7 @@ svg.addEventListener('click', (event) => {
     } else alert('R is not set!')
 })
 
-let table_rows = document.getElementsByTagName('tr')
+/*let table_rows = document.getElementsByTagName('tr')
 let table_rows_length = table_rows.length
 let dots = document.getElementsByTagName('circle')
 const style_attribute_new = 'fill: #E6D4C3FF; stroke: black;'
@@ -54,7 +54,7 @@ for(let i = 1; i < table_rows_length; i++) {
         dots.item(i-1).setAttribute("r", '5')
         setTimeout(function() {dots.item(i-1).setAttribute("r", '3')}, 1500)
     })
-}
+}*/
 
 function drawDotFromLastRow() {
 

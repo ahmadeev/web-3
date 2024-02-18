@@ -116,6 +116,14 @@ h2 {
     justify-content: center;
 }
 
+.formLine {
+    width: 150px;
+}
+
+input[type="text"] {
+    text-align: center;
+}
+
 /*
 .form_submit_button:active, .form_reset_button:active, .meowButton:active {background: #e6d4c3;}
 .form_submit_button:hover, .form_reset_button:hover, .meowButton:hover {background: rgb(230, 212, 195);}
@@ -136,7 +144,10 @@ h2 {
     height: 26px;
 }
 
-
+.form_submit_button, .form_reset_button, .meowButton {
+    width: 70px;
+    height: 30px;
+}
 
 .button_block {
     line-height: 30px;
