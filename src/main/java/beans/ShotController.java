@@ -1,8 +1,9 @@
 package beans;
 
-import jakarta.enterprise.context.RequestScoped;
+//import jakarta.enterprise.context.RequestScoped;
 import jakarta.faces.bean.ManagedBean;
 import jakarta.faces.bean.ManagedProperty;
+import jakarta.faces.bean.RequestScoped;
 import jakarta.inject.Inject;
 
 @ManagedBean
