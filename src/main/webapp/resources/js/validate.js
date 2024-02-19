@@ -18,6 +18,6 @@ function isRValid(r) {
 }
 
 function isYValid(y) {
-    if (y >= Y_MIN && y <= Y_MAX) return true
+    if (y > Y_MIN && y < Y_MAX) return true
     else return false
 }

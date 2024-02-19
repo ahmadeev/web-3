@@ -87,7 +87,7 @@ h2 {
 /*    font: 16px sans-serif;
     color: rgba(0, 0, 0, 0);*/
     background: aliceblue;
-    line-height: 50px;
+/*    line-height: 50px;*/
     height: auto;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -116,12 +116,17 @@ h2 {
     justify-content: center;
 }
 
+form {
+    line-height: unset;
+}
+
 .formLine {
     width: 150px;
 }
 
 input[type="text"] {
     text-align: center;
+    width: 130px;
 }
 
 /*
@@ -141,11 +146,11 @@ input[type="text"] {
     margin-right: 5px;
     background: white;
     border-width: 1px ;
-    height: 26px;
+    height: 25px;
 }
 
 .form_submit_button, .form_reset_button, .meowButton {
-    width: 70px;
+    width: 60px;
     height: 30px;
 }
 
@@ -154,8 +159,14 @@ input[type="text"] {
 }
 
 .input_x_button {
-    width: 26px;
-    height: 26px;
+    width: 40px;
+    height: 25px;
+}
+
+.slider {
+    margin-top: 10px;
+    margin-bottom: 15px;
+
 }
 
 h2 {

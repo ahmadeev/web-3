@@ -15,51 +15,47 @@
 
                 <h:form>
 
-<!--                    <div class="formLine">
-                        <h:inputText class="form_input_x" id="xType" value="#{shotController.shot.x}"></h:inputText>
-                    </div>-->
-
-                    <div class="formLine">
+                    <div id="form_x_container" style="width: 140px; height: 110px">
+                        <div>
+                            <h:inputHidden class="form_input_x" id="xType" value="#{shotController.shot.x}"/>
+                            <h:outputText id="form_output_x" value="x value: #{shotController.shot.x}"/>
+                        </div>
 
                         <div class="button_block">
                             <h:commandButton value="-5" type="button" styleClass="button input_x_button" >
-                                <f:ajax render="xType" listener="#{shotController.shot.setX(-5)}"/>
+                                <f:ajax render="xType form_output_x" listener="#{shotController.shot.setX(-5)}"/>
                             </h:commandButton>
 
                             <h:commandButton value="-4" type="button" styleClass="button input_x_button" >
-                                <f:ajax render="xType" listener="#{shotController.shot.setX(-4)}"/>
+                                <f:ajax render="xType form_output_x" listener="#{shotController.shot.setX(-4)}"/>
                             </h:commandButton>
 
                             <h:commandButton value="-3" type="button" styleClass="button input_x_button" >
-                                <f:ajax render="xType" listener="#{shotController.shot.setX(-3)}"/>
-                            </h:commandButton>
-
-                            <h:inputText class="form_input_x" id="xType" value="#{shotController.shot.x}" style="height: 90px; width: 50px; float:right">
-                                <f:validateDoubleRange minimum="-5.0" maximum="3.0"/>
-                            </h:inputText><br/>
+                                <f:ajax render="xType form_output_x" listener="#{shotController.shot.setX(-3)}"/>
+                            </h:commandButton><br/>
 
                             <h:commandButton value="-2" type="button" styleClass="button input_x_button" >
-                                <f:ajax render="xType" listener="#{shotController.shot.setX(-2)}"/>
+                                <f:ajax render="xType form_output_x" listener="#{shotController.shot.setX(-2)}"/>
                             </h:commandButton>
 
                             <h:commandButton value="-1" type="button" styleClass="button input_x_button" >
-                                <f:ajax render="xType" listener="#{shotController.shot.setX(-1)}"/>
+                                <f:ajax render="xType form_output_x" listener="#{shotController.shot.setX(-1)}"/>
                             </h:commandButton>
 
                             <h:commandButton value="0" type="button" styleClass="button input_x_button" >
-                                <f:ajax render="xType" listener="#{shotController.shot.setX(0)}"/>
+                                <f:ajax render="xType form_output_x" listener="#{shotController.shot.setX(0)}"/>
                             </h:commandButton><br/>
 
                             <h:commandButton value="1" type="button" styleClass="button input_x_button" >
-                                <f:ajax render="xType" listener="#{shotController.shot.setX(1)}"/>
+                                <f:ajax render="xType form_output_x" listener="#{shotController.shot.setX(1)}"/>
                             </h:commandButton>
 
                             <h:commandButton value="2" type="button" styleClass="button input_x_button" >
-                                <f:ajax render="xType" listener="#{shotController.shot.setX(2)}"/>
+                                <f:ajax render="xType form_output_x" listener="#{shotController.shot.setX(2)}"/>
                             </h:commandButton>
 
                             <h:commandButton value="3" type="button" styleClass="button input_x_button" >
-                                <f:ajax render="xType" listener="#{shotController.shot.setX(3)}"/>
+                                <f:ajax render="xType form_output_x" listener="#{shotController.shot.setX(3)}"/>
                             </h:commandButton>
                         </div>
 
@@ -67,21 +63,23 @@
 
 
 
-                    <div class="formLine">
-                        <h:inputText class="form_input_y" id="yType" value="#{shotController.shot.y}" style="width:150px">
+                    <div id="form_y_container" style="margin-bottom: 10px; margin-top: 10px; height: 40px; width: 130px">
+                        <h:outputLabel for="yType" value="y value:" />
+                        <h:inputText converter="YCoordinateConverter" class="form_input_y" id="yType" value="#{shotController.shot.y}">
                             <f:validateDoubleRange minimum="-3.0" maximum="3.0"/>
                         </h:inputText>
                     </div>
 
-                    <div class="formLine">
-                        <h:inputText class="slider_input" id="RType" value="#{shotController.shot.r}" style="width:150px">
+                    <div id="form_R_container" style="width: 130px; height: 70px">
+                        <h:outputLabel for="RType" value="R value:" />
+                        <h:inputText class="slider_input" id="RType" value="#{shotController.shot.r}">
                             <f:validateDoubleRange minimum="1.0" maximum="4.0"/>
-                        </h:inputText>
+                        </h:inputText><br/>
 
-                        <p:slider class='slider' for="RType" display="RType" minValue="1.0" maxValue="4.0" step="0.25" style="width:150px" />
+                        <p:slider class='slider' for="RType" display="RType" minValue="1.0" maxValue="4.0" step="0.25" style="width:130px" />
                     </div>
 
-                    <div class="formLine">
+                    <div class="formLine" style="width: 130px; height: 40px">
                         <h:commandButton styleClass="form_submit_button button" value="check" action="#{shotController.getManageRequest}">
                             <f:ajax execute="xType yType RType" render="tableResults"/>
                         </h:commandButton>
@@ -184,7 +182,7 @@
              <div id="centerContent">
 
                  <p:dataTable id="tableResults" value="#{shotResults.results}" var="shot" sortMode="single"
-                              styleClass="tableResults" style="margin-bottom: 15px; border-color: black;">
+                              styleClass="tableResults" style="margin-bottom: 15px; margin-top: 15px; border-color: black;">
                      <p:column headerText="X" style="text-align: center">
                          <h:outputText value="#{shot.x}"/>
                      </p:column>
