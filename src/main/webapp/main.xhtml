@@ -17,7 +17,7 @@
 
                     <div id="form_x_container" style="width: 140px; height: 110px">
                         <div>
-                            <h:inputText id="xType" class="form_input_x" value="#{shotController.shot.x}"/>
+                            <h:inputHidden id="xType" class="form_input_x" value="#{shotController.shot.x}"/>
                             <h:outputText id="form_output_x" value="x value: #{shotController.shot.x}"/>
                         </div>
 
@@ -65,8 +65,8 @@
 
                     <div id="form_y_container" style="margin-bottom: 10px; margin-top: 10px; height: 40px; width: 130px">
                         <h:outputLabel for="yType" value="y value:" />
-                        <h:inputText converter="YCoordinateConverter" class="form_input_y" id="yType" value="#{shotController.shot.y}">
-                            <f:validateDoubleRange minimum="-3.0" maximum="3.0"/>
+                        <h:inputText class="form_input_y" id="yType" converter="YCoordinateConverter" value="#{shotController.shot.y}">
+
                         </h:inputText>
                     </div>
 
@@ -97,7 +97,6 @@
 
 
                     <h:inputText class="input_x" id="xType-hidden" value="#{shotController.shot.x}" style="width:100px">
-                        <f:validateDoubleRange minimum="-5.0" maximum="3.0"/>
                     </h:inputText>
 
                     <h:inputText class="input_y" id="yType-hidden" value="#{shotController.shot.y}" style="width:100px">

@@ -2,7 +2,6 @@ let submit = document.querySelector('.form_submit_button')
 submit.addEventListener("click", function() {
 
     let xInput = parseFloat(document.querySelector('#form_x_container input[type="hidden"]').value)
-    alert(xInput)
     let yInput = parseFloat(document.querySelector('.form_input_y').value)
     let RInput = parseFloat(document.querySelector('.slider_input').value)
 

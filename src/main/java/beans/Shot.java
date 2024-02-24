@@ -55,7 +55,6 @@ public class Shot {
 
     public void setX(double x) {
         this.x = x;
-        System.out.println("x установлен" + x);
     }
 
     public void setY(double y) {
