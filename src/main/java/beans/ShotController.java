@@ -6,6 +6,9 @@ import jakarta.faces.bean.ManagedProperty;
 import jakarta.faces.bean.RequestScoped;
 import jakarta.inject.Inject;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 @ManagedBean
 @RequestScoped
 public class ShotController {
@@ -49,7 +52,12 @@ public class ShotController {
         double r = shot.getR();
         boolean isHit = shotHandler.isInside(x, y, r);
         if (shotHandler.isYValid(y) && shotHandler.isRValid(r)) {
-            Shot newShot = new Shot(decimalTransform(x, 2), decimalTransform(y, 2), decimalTransform(r, 2), isHit);
+            long date = (new Date()).getTime();
+            SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
+            String currentTime = dateFormat.format(date);
+            //System.out.println(currentTime);
+
+            Shot newShot = new Shot(decimalTransform(x, 2), decimalTransform(y, 2), decimalTransform(r, 2), isHit, currentTime);
 
             System.out.println(newShot.toString());
 

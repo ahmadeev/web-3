@@ -191,8 +191,11 @@
                      <p:column headerText="R" style="text-align: center">
                          <h:outputText value="#{shot.r}"/>
                      </p:column>
-                     <p:column headerText="Hit?" style="text-align: center">
+                     <p:column headerText="Hit" style="text-align: center">
                          <h:outputText value="#{shot.hit}"/>
+                     </p:column>
+                     <p:column headerText="Time" style="text-align: center">
+                         <h:outputText value="#{shot.currentTime}"/>
                      </p:column>
                  </p:dataTable>
 

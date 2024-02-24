@@ -14,6 +14,8 @@ public class Shot {
     private double R;
     @Column(name = "hit", nullable = false)
     private boolean isHit;
+    @Column(nullable = false, name = "currentTime")
+    private String currentTime;
 
     public Shot() {
         System.out.println("Shot bean started");
@@ -31,6 +33,14 @@ public class Shot {
         this.y = y;
         this.R = r;
         this.isHit = isHit;
+    }
+
+    public Shot(double x, double y, double r, boolean isHit, String currentTime) {
+        this.x = x;
+        this.y = y;
+        this.R = r;
+        this.isHit = isHit;
+        this.currentTime = currentTime;
     }
 
     public long getId() {
@@ -53,6 +63,10 @@ public class Shot {
         return isHit;
     }
 
+    public String getCurrentTime() {
+        return currentTime;
+    }
+
     public void setX(double x) {
         this.x = x;
     }
@@ -69,6 +83,10 @@ public class Shot {
         this.isHit = hit;
     }
 
+    public void setCurrentTime(String currentTime) {
+        this.currentTime = currentTime;
+    }
+
     @Override
     public String toString() {
         return "shot{" +
@@ -76,6 +94,7 @@ public class Shot {
                 ", y=" + y +
                 ", r=" + R +
                 ", result=" + isHit +
+                ", currentTime=" + currentTime +
                 "}";
     }
 }

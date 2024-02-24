@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="primefacestest:war" />
+      <artifact name="primefacestest:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -12,8 +12,9 @@
     <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="работает, но дальше эксперименты">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/beans/Shot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/Shot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/beans/ShotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/ShotController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/dot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/dot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/template.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/template.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,23 +48,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/danis/OneDrive/Рабочий стол/primefacestest&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/danis/OneDrive/Рабочий стол/лабная мусорка/web3lab",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="JBoss/WildFly 24.0.0.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 24.0.0.Final" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
@@ -151,7 +152,7 @@
       <workItem from="1708216016013" duration="10000" />
       <workItem from="1708252491346" duration="1265000" />
       <workItem from="1708352401899" duration="16000" />
-      <workItem from="1708757940689" duration="4983000" />
+      <workItem from="1708757940689" duration="8038000" />
     </task>
     <task id="LOCAL-00001" summary="meow">
       <option name="closed" value="true" />
@@ -329,7 +330,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708129702697</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="работает, но дальше эксперименты">
+      <option name="closed" value="true" />
+      <created>1708772494716</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1708772494716</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
