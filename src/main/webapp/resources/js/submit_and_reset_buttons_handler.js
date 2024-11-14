@@ -34,11 +34,12 @@ function drawDot(x, y, R, isHit, isEqual) {
 }
 
 function drawDots(lastR) {
-    const is_empty = document.querySelector("tbody tr.ui-datatable-empty-message").length !== 0
+    const empty_message = document.querySelector("tbody tr.ui-datatable-empty-message")
+    const rows = document.querySelectorAll('tbody tr')
+
+    const is_empty = empty_message !== null || rows.length === 0
     if (is_empty) return;
 
-    const rows = document.querySelectorAll('tbody tr')
-    console.log(rows)
     rows.forEach((row) => {
         if (row != null) {
             let cells = row.querySelectorAll('td');

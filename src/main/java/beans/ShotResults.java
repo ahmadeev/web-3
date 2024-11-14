@@ -2,7 +2,6 @@ package beans;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.faces.bean.ApplicationScoped;
-import jakarta.faces.bean.SessionScoped;
 import jakarta.faces.bean.ManagedBean;
 import jakarta.inject.Inject;
 import lombok.Getter;

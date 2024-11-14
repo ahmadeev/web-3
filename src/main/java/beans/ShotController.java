@@ -4,14 +4,12 @@ import jakarta.faces.bean.ManagedBean;
 import jakarta.faces.bean.ManagedProperty;
 import jakarta.faces.bean.RequestScoped;
 import jakarta.inject.Inject;
-// import jakarta.inject.Named;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-// @Named // новое
 @ManagedBean(name="shotController")
 @RequestScoped
 public class ShotController {
