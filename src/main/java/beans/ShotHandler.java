@@ -1,20 +1,24 @@
 package beans;
 
+import lombok.Getter;
+
+import java.math.BigDecimal;
 import java.util.List;
 
+@Getter
 public class ShotHandler {
+    private static final BigDecimal MIN_X = new BigDecimal(-2);
+    private static final BigDecimal MAX_X = new BigDecimal("0.5");
 
-    private final List<Integer> availableX = List.of(-5, -4, -3, -2, -1, 0, 1, 2, 3);
+    private static final BigDecimal MIN_Y = new BigDecimal(-3);
+    private static final BigDecimal MAX_Y = new BigDecimal(5);
+
+    private static final BigDecimal MIN_R = new BigDecimal(2);
+    private static final BigDecimal MAX_R = new BigDecimal(5);
+
+    private final List<Double> availableX = List.of(-5.0, -4.0, -3.0, -2.0, -1.0, 0.0, 1.0, 2.0, 3.0);
 
     private final List<Double> availableR = List.of(1.0, 1.25, 1.5, 1.75, 2.0, 2.25, 2.5, 2.75, 3.0, 3.25, 3.5, 3.75, 4.0);
-
-    public List<Integer> getAvailableX() {
-        return availableX;
-    }
-
-    public List<Double> getAvailableR() {
-        return availableR;
-    }
 
     public boolean isValid(double x, double y, double r) {
         return isXValid(x) && isYValid(y) && isRValid(r);

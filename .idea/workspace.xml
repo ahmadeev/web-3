@@ -9,18 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="че-то уже не работает">
+    <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="че-то уже не работает 2">
+      <change afterPath="$PROJECT_DIR$/src/main/java/beans/InputShot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/beans/Shot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/Shot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/beans/ShotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/ShotController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/beans/YCoordinateConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/YCoordinateConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/audio/meow.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/clock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/clock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/dot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/dot.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/onclick.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/onclick.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/redrawLabels.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/redrawLabels.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/validate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/beans/ShotHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/ShotHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +73,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="beans" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="JBoss/WildFly 30.0.0.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 30.0.0.Final" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -178,7 +178,7 @@
       <workItem from="1730895265714" duration="7000" />
       <workItem from="1730904135665" duration="2719000" />
       <workItem from="1731529011486" duration="5000" />
-      <workItem from="1731586608345" duration="3581000" />
+      <workItem from="1731586608345" duration="4958000" />
     </task>
     <task id="LOCAL-00001" summary="meow">
       <option name="closed" value="true" />
@@ -372,7 +372,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731588269241</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="че-то уже не работает 2">
+      <option name="closed" value="true" />
+      <created>1731590692208</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1731590692208</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,6 +401,7 @@
     <MESSAGE value="meow" />
     <MESSAGE value="работает, но дальше эксперименты" />
     <MESSAGE value="че-то уже не работает" />
-    <option name="LAST_COMMIT_MESSAGE" value="че-то уже не работает" />
+    <MESSAGE value="че-то уже не работает 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="че-то уже не работает 2" />
   </component>
 </project>

@@ -4,8 +4,8 @@ import jakarta.persistence.*;
 import jakarta.transaction.Transactional;
 
 public class DBHandler {
-    private EntityManagerFactory emf = Persistence.createEntityManagerFactory("default");
-    private EntityManager em = emf.createEntityManager();
+    private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("default");
+    private final EntityManager em = emf.createEntityManager();
 
     @Transactional
     public Shot create(Shot shot) {

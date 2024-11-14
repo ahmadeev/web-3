@@ -1,19 +1,32 @@
 package beans;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
 @Entity
 public class Shot {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @Setter
     @Column(name = "x", nullable = false)
     private double x;
+
+    @Setter
     @Column(name = "y", nullable = false)
     private double y;
+
+    @Setter
     @Column(name = "r", nullable = false)
     private double R;
+
+    @Setter
     @Column(name = "hit", nullable = false)
     private boolean isHit;
+
+    @Setter
     @Column(nullable = false, name = "currentTime")
     private String currentTime;
 
@@ -40,50 +53,6 @@ public class Shot {
         this.y = y;
         this.R = r;
         this.isHit = isHit;
-        this.currentTime = currentTime;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public double getX() {
-        return x;
-    }
-
-    public double getY() {
-        return y;
-    }
-
-    public double getR() {
-        return R;
-    }
-
-    public boolean isHit() {
-        return isHit;
-    }
-
-    public String getCurrentTime() {
-        return currentTime;
-    }
-
-    public void setX(double x) {
-        this.x = x;
-    }
-
-    public void setY(double y) {
-        this.y = y;
-    }
-
-    public void setR(double r) {
-        this.R = r;
-    }
-
-    public void setHit(boolean hit) {
-        this.isHit = hit;
-    }
-
-    public void setCurrentTime(String currentTime) {
         this.currentTime = currentTime;
     }
 

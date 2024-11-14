@@ -4,6 +4,8 @@ import jakarta.annotation.PostConstruct;
 import jakarta.faces.bean.SessionScoped;
 import jakarta.faces.bean.ManagedBean;
 import jakarta.inject.Inject;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -11,6 +13,7 @@ import java.util.ArrayList;
 @ManagedBean(name = "shotResults", eager = true)
 @SessionScoped
 public class ShotResults implements Serializable {
+    @Getter @Setter
     private ArrayList<Shot> results;
 
     @Inject
@@ -26,13 +29,4 @@ public class ShotResults implements Serializable {
         dbHandler.resetTable();
         System.out.println("Инициализация бина ShotResults (с очисткой результатов)");
     }
-
-    public ArrayList<Shot> getResults() {
-        return results;
-    }
-
-    public void setResults(ArrayList<Shot> results) {
-        this.results = results;
-    }
-
 }
