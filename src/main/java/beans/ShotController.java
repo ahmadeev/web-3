@@ -35,7 +35,7 @@ public class ShotController {
         System.out.println("Shot controller bean started!");
         shot.setX(0);
         shot.setY(0);
-        shot.setR(1.0);
+        shot.setR(2.0);
     }
 
     public Shot getShot() {
@@ -66,7 +66,6 @@ public class ShotController {
 
             dbHandler.create(newShot);
 
-
         } else System.out.println("Неправильные входные данные!");
 
     }
@@ -76,8 +75,4 @@ public class ShotController {
         number = Math.ceil(number * scale) / scale;
         return number;
     }
-
-/*    public void sayMeow() {
-        System.out.println("meow");
-    }*/
 }

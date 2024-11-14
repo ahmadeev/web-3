@@ -26,11 +26,11 @@ svg.addEventListener('click', (event) => {
     let yInput = null
     let RInput = parseFloat(document.querySelector('.slider_input').value)
     if (RInput !== 0 && RInput != null) {
-        // alert(offsetLeft + " " + offsetTop)
-        // alert((event.clientX - offsetLeft) + " " + (event.clientY - offsetTop))
+        // console.log(offsetLeft + " " + offsetTop)
+        // console.log((event.clientX - offsetLeft) + " " + (event.clientY - offsetTop))
         xInput = ((event.clientX - offsetLeft - 25) - 125) / (80 / RInput)
         yInput = ((event.clientY - offsetTop - 25) - 125) / (-80 / RInput)
-        // alert(xInput + " " + yInput)
+        // console.log(xInput + " " + yInput)
         if (isYValid(yInput) && isRValid(RInput)) {
             document.querySelector('.input_x').value = xInput
             document.querySelector('.input_y').value = yInput
@@ -64,7 +64,7 @@ function drawDotFromLastRow() {
     let x = parseFloat(cells[0].innerHTML)
     let y = parseFloat(cells[1].innerHTML)
     let r = parseFloat(cells[2].innerHTML)
-    let isHit = cells[3].innerHTML == 'true' ? true : false
+    let isHit = cells[3].innerHTML === 'true'
 
     drawDot(x, y, r, isHit, true)
 

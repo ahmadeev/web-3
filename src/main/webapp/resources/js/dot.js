@@ -11,7 +11,6 @@ submit.addEventListener("click", function() {
             subtree: true
         })
     } else alert('Coordinates are not valid!' + ' (x: ' + xInput.toFixed(2) + ', y: ' + yInput.toFixed(2) + ', R: ' + RInput.toFixed(2) + ')')
-
 })
 
 let reset = document.querySelector('.form_reset_button')
@@ -46,15 +45,14 @@ function drawDots(lastR) {
     console.log(rows)
     rows.forEach((row) => {
         if (row != null) {
-            var cells = row.querySelectorAll('td')
-            var REqualsLastR = parseFloat(cells[2].innerText) === lastR
+            let cells = row.querySelectorAll('td');
+            let REqualsLastR = parseFloat(cells[2].innerText) === lastR;
             drawDot(parseFloat(cells[0].innerText), parseFloat(cells[1].innerText), lastR, (cells[3].innerText === 'true'), REqualsLastR)
         }
     })
 }
 
 function resetButton() {
-
     clearDots()
 
     const rows = document.querySelectorAll('tbody tr');
@@ -67,26 +65,15 @@ function resetButton() {
         pos_half_R[i].childNodes[0].nodeValue = 'R/2'
     }*/
 
-    for(let i=0; i<2; i++) {
-        neg_R[i].childNodes[0].nodeValue = '-1.0'
-        neg_half_R[i].childNodes[0].nodeValue = '-0.5'
-        pos_R[i].childNodes[0].nodeValue = '1.0'
-        pos_half_R[i].childNodes[0].nodeValue = '0.5'
+    for(let i = 0; i < 2; i++) {
+        neg_R[i].childNodes[0].nodeValue = '-2.0'
+        neg_half_R[i].childNodes[0].nodeValue = '-1.0'
+        pos_R[i].childNodes[0].nodeValue = '2.0'
+        pos_half_R[i].childNodes[0].nodeValue = '1.0'
     }
-
 }
 
 function clearDots() {
     const dots = document.querySelectorAll('.target-dot');
     dots.forEach(dot => {dot.remove()})
 }
-
-/*function sayMeow() {
-
-    let audio = new Audio(); // Создаём новый элемент Audio
-    audio.src = 'resources/audio/meow.mp3'; // Указываем путь к звуку "клика"
-    audio.autoplay = true; // Автоматически запускаем
-
-}*/
-
-// let meow = document.querySelector('.meowButton')

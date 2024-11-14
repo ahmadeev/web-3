@@ -8,19 +8,21 @@ function addEventListeners(types, element) {
         const RInput = document.querySelector('.slider_input')
         types.split(" ").forEach(function(e){
             element.addEventListener(e, function () {
+                console.log(RInput, RInput.value)
                 redrawLabels(RInput.value)
                 clearDots()
                 drawDots(parseFloat(RInput.value))
             });
         })
         return 0
+    } catch (exception) {
+        return 1
     }
-    finally {return 1}
 }
 
 function redrawLabels(r) {
     if (parseFloat(r) === 0 || r == null) {return}
-    for(let i=0; i<2; i++) {
+    for(let i = 0; i < 2; i++) {
         neg_R[i].childNodes[0].nodeValue = "-" + r
         pos_R[i].childNodes[0].nodeValue = r
         r = parseFloat(r)

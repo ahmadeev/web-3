@@ -17,9 +17,9 @@ public class YCoordinateConverter implements Converter<Double> {
             System.out.println("Y: Значение отсутствует!");
             return null;
         }
-        if (!Pattern.matches("(?:-[210]|\\+?[012])(?:[.,]\\d{1,15})?", y)) {
-            System.out.println("Y: Значение не подходит под диапазон (-3, 3).");
-            throw new ConverterException(new FacesMessage(FacesMessage.SEVERITY_ERROR, "Y: Значение не подходит под диапазон (-3, 3).", ""));
+        if (!Pattern.matches("(?:-[210]|\\+?[01234])(?:[.,]\\d{1,15})?", y)) {
+            System.out.println("Y: Значение не подходит под диапазон (-3, 5).");
+            throw new ConverterException(new FacesMessage(FacesMessage.SEVERITY_ERROR, "Y: Значение не подходит под диапазон (-3, 5).", ""));
         }
         return Double.parseDouble(y.replace(",", "."));
     }
