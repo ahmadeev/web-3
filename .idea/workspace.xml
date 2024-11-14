@@ -9,12 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="улучшений все больше, но не работает 2">
+    <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="фикс">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/beans/ShotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/ShotController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/beans/ShotResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/ShotResults.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/submit_and_reset_buttons_handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/submit_and_reset_buttons_handler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/beans/DBHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/DBHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/beans/InputShot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mbean/InputShot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/beans/PageError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mbean/PageError.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/beans/Shot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Shot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/beans/ShotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mbean/ShotController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/beans/ShotHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mbean/ShotHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/beans/ShotResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mbean/ShotResults.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/beans/TextInputCoordinateConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mbean/TextInputCoordinateConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -471,7 +476,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731596490536</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="фикс">
+      <option name="closed" value="true" />
+      <created>1731597976077</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1731597976077</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,6 +508,7 @@
     <MESSAGE value="че-то уже не работает 2" />
     <MESSAGE value="lombok-штучки + я кажется че-то понял" />
     <MESSAGE value="улучшений все больше, но не работает 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="улучшений все больше, но не работает 2" />
+    <MESSAGE value="фикс" />
+    <option name="LAST_COMMIT_MESSAGE" value="фикс" />
   </component>
 </project>

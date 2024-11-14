@@ -1,4 +1,4 @@
-package beans;
+package mbean;
 
 import jakarta.faces.bean.ManagedBean;
 

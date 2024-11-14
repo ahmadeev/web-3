@@ -1,5 +1,7 @@
-package beans;
+package mbean;
 
+import db.DBHandler;
+import entity.Shot;
 import jakarta.annotation.PostConstruct;
 import jakarta.faces.bean.ApplicationScoped;
 import jakarta.faces.bean.ManagedBean;

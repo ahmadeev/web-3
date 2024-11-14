@@ -1,11 +1,14 @@
-package beans;
+package mbean;
 
+import db.DBHandler;
+import entity.Shot;
 import jakarta.faces.bean.ManagedBean;
 import jakarta.faces.bean.ManagedProperty;
 import jakarta.faces.bean.RequestScoped;
 import jakarta.inject.Inject;
 import lombok.Getter;
 import lombok.Setter;
+import util.ShotHandler;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
