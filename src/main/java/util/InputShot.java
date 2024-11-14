@@ -18,7 +18,7 @@ public class InputShot {
     private BigDecimal R;
 
     public InputShot() {
-        System.out.println("InputShot started");
+        System.out.println("Object InputShot created");
     }
 
     public InputShot(InputShot shot) {

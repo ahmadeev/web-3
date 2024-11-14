@@ -23,7 +23,15 @@ public class ShotController {
     @Inject
     private ShotHandler shotHandler;
 
-    @Inject
+//    @Inject
+//    private DBHandler dbHandler;
+
+//    @Getter @Setter
+//    @ManagedProperty(value = "#{shotHandler}")
+//    private ShotHandler shotHandler;
+
+    @Getter @Setter
+    @ManagedProperty(value = "#{dBHandler}")
     private DBHandler dbHandler;
 
     @Getter @Setter

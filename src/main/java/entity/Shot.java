@@ -31,7 +31,7 @@ public class Shot {
     private String currentTime;
 
     public Shot() {
-        System.out.println("Shot bean started");
+        System.out.println("Object Shot created");
     }
 
     public Shot(Shot shot) {
