@@ -29,6 +29,6 @@ public class ShotResults implements Serializable {
     public void init() {
         results = new ArrayList<>();
         dbHandler.resetTable();
-        System.out.println("Инициализация бина ShotResults (с очисткой результатов)");
+        System.out.println("PostConstruct ShotResults mbean method (result array was cleaned)");
     }
 }

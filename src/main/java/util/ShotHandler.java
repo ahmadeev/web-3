@@ -1,11 +1,13 @@
 package util;
 
+import jakarta.inject.Singleton;
 import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.util.List;
 
 @Getter
+@Singleton
 public class ShotHandler {
     private static final BigDecimal MIN_X = new BigDecimal(-2);
     private static final BigDecimal MAX_X = new BigDecimal("0.5");

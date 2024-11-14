@@ -20,16 +20,14 @@ public class ShotController {
     @Setter
     private Shot shot = new Shot();
 
+    private final SimpleDateFormat sdf;
+
+    //  не является мбином, должен существовать в одном экземляре
+    //  аннотации @jakarta.inject.Inject и @jakarta.inject.Singleton
     @Inject
     private ShotHandler shotHandler;
 
-//    @Inject
-//    private DBHandler dbHandler;
-
-//    @Getter @Setter
-//    @ManagedProperty(value = "#{shotHandler}")
-//    private ShotHandler shotHandler;
-
+    //  инъекция с помощью средств jsf, чтобы избежать повторных инициализаций (возможно баг)
     @Getter @Setter
     @ManagedProperty(value = "#{dBHandler}")
     private DBHandler dbHandler;
@@ -43,6 +41,7 @@ public class ShotController {
         shot.setX(0);
         shot.setY(0);
         shot.setR(2.0);
+        sdf = new SimpleDateFormat("HH:mm:ss");
     }
 
     public void getManageRequest() {
@@ -52,20 +51,22 @@ public class ShotController {
         boolean isHit = shotHandler.isInside(x, y, r);
         if (shotHandler.isYValid(y) && shotHandler.isRValid(r)) {
             long date = (new Date()).getTime();
-            SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
-            String currentTime = dateFormat.format(date);
-            //System.out.println(currentTime);
-
-            Shot newShot = new Shot(decimalTransform(x, 2), decimalTransform(y, 2), decimalTransform(r, 2), isHit, currentTime);
-
-            System.out.println(newShot.toString());
+            String currentTime = sdf.format(date);
+            Shot newShot = new Shot(
+                    decimalTransform(x, 2),
+                    decimalTransform(y, 2),
+                    decimalTransform(r, 2),
+                    isHit,
+                    currentTime
+            );
 
             shotResults.getResults().add(newShot);
-            System.out.println(shotResults.getResults());
-
             dbHandler.create(newShot);
 
-        } else System.out.println("Неправильные входные данные!");
+            System.out.println(newShot);
+            System.out.println(shotResults.getResults());
+
+        } else System.out.println("Invalid input!");
     }
 
     private double decimalTransform(double number, int decimals) {

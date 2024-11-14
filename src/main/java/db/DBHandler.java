@@ -31,7 +31,7 @@ public class DBHandler {
         Query query = em.createQuery(
                 "DELETE FROM Shot"
         );
-        System.out.println("Удалено строк: " + query.executeUpdate());
+        System.out.println("Deleted " + query.executeUpdate() + " rows");
         em.getTransaction().commit();
     }
 }
