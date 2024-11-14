@@ -21,7 +21,7 @@ public class ShotResults implements Serializable {
     private DBHandler dbHandler;
 
     public ShotResults() {
-        System.out.println("Shot results bean started!");
+        System.out.println("ShotResults initialized");
     }
 
     @PostConstruct

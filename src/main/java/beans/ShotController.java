@@ -4,7 +4,7 @@ import jakarta.faces.bean.ManagedBean;
 import jakarta.faces.bean.ManagedProperty;
 import jakarta.faces.bean.RequestScoped;
 import jakarta.inject.Inject;
-import jakarta.inject.Named;
+// import jakarta.inject.Named;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -30,7 +30,7 @@ public class ShotController {
     private ShotResults shotResults;
 
     public ShotController() {
-        System.out.println("Shot controller bean started!");
+        System.out.println("ShotController initialized");
         shot.setX(0);
         shot.setY(0);
         shot.setR(2.0);

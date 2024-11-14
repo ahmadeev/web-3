@@ -9,8 +9,8 @@ import jakarta.faces.convert.FacesConverter;
 
 import java.util.regex.Pattern;
 
-@FacesConverter(value = "YCoordinateConverter", managed = true)
-public class YCoordinateConverter implements Converter<Double> {
+@FacesConverter(value = "TextInputCoordinateConverter", managed = true)
+public class TextInputCoordinateConverter implements Converter<Double> {
     @Override
     public Double getAsObject(FacesContext facesContext, UIComponent uiComponent, String y) {
         if (y == null || y.isEmpty()) {

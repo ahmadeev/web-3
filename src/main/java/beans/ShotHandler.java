@@ -20,6 +20,10 @@ public class ShotHandler {
 
     private final List<Double> availableR = List.of(1.0, 1.25, 1.5, 1.75, 2.0, 2.25, 2.5, 2.75, 3.0, 3.25, 3.5, 3.75, 4.0);
 
+    public ShotHandler() {
+        System.out.println("ShotHandler initialized");
+    }
+
     public boolean isValid(double x, double y, double r) {
         return isXValid(x) && isYValid(y) && isRValid(r);
     }

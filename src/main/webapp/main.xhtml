@@ -79,15 +79,15 @@
                     </div>-->
 
                     <div id="form_x_container" style="margin-bottom: 10px; margin-top: 10px; height: 40px; width: 130px">
-                        <h:outputLabel for="xType" value="y value:" />
-                        <h:inputText class="form_input_y" id="xType" converter="YCoordinateConverter" value="#{shotController.shot.x}">
+                        <h:outputLabel for="xType" value="x value:" />
+                        <h:inputText class="form_input_y" id="xType" converter="TextInputCoordinateConverter" value="#{shotController.shot.x}">
                         </h:inputText>
                     </div>
 
 
                     <div id="form_y_container" style="margin-bottom: 10px; margin-top: 10px; height: 40px; width: 130px">
                         <h:outputLabel for="yType" value="y value:" />
-                        <h:inputText class="form_input_y" id="yType" converter="YCoordinateConverter" value="#{shotController.shot.y}">
+                        <h:inputText class="form_input_y" id="yType" converter="TextInputCoordinateConverter" value="#{shotController.shot.y}">
 
                         </h:inputText>
                     </div>

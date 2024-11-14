@@ -11,16 +11,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="lombok-штучки + я кажется че-то понял">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/beans/DBHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/DBHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/beans/ShotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/ShotController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/beans/ShotHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/ShotHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/beans/ShotResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/ShotResults.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/areaCheck.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/clock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/onload_script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/dot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/submit_and_reset_buttons_handler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/onclick.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/onclick_event_handler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/redrawLabels.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/redraw_labels.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/validate_input.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

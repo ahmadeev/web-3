@@ -1,9 +1,16 @@
 package beans;
 
+import jakarta.faces.bean.ManagedBean;
 import jakarta.persistence.*;
 import jakarta.transaction.Transactional;
 
+@ManagedBean(eager = true)
 public class DBHandler {
+
+    public DBHandler() {
+        System.out.println("DBHandler initialized");
+    }
+
     private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("default");
     private final EntityManager em = emf.createEntityManager();
 
