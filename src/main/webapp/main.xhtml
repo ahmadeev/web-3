@@ -15,7 +15,7 @@
 
                 <h:form>
 
-                    <div id="form_x_container" style="width: 140px; height: 110px">
+<!--                    <div id="form_x_container" style="width: 140px; height: 110px">
                         <div>
                             <h:inputHidden id="xType" class="form_input_x" value="#{shotController.shot.x}"/>
                             <h:outputText id="form_output_x" value="x value: #{shotController.shot.x}"/>
@@ -59,8 +59,27 @@
                             </h:commandButton>
                         </div>
 
-                    </div>
+                    </div>-->
 
+                    <div id="form_x_container" style="width: 140px; height: 110px">
+
+                        <label>x:</label><br/>
+
+                        <label for="x_input_1">-2.0</label>
+                        <h:selectBooleanCheckbox value="-2" id="x_input_1" /><br/>
+                        <label for="x_input_1">-1.5</label>
+                        <h:selectBooleanCheckbox value="-1.5" id="x_input_2" /><br/>
+                        <label for="x_input_1">-1.0</label>
+                        <h:selectBooleanCheckbox value="-1" id="x_input_3" /><br/>
+                        <label for="x_input_1">-0.5</label>
+                        <h:selectBooleanCheckbox value="-0.5" id="x_input_4" /><br/>
+                        <label for="x_input_1">0.0</label>
+                        <h:selectBooleanCheckbox value="0" id="x_input_5" /><br/>
+                        <label for="x_input_1">0.5</label>
+                        <h:selectBooleanCheckbox value="0.5" id="x_input_6" /><br/>
+
+
+                    </div>
 
 
                     <div id="form_y_container" style="margin-bottom: 10px; margin-top: 10px; height: 40px; width: 130px">

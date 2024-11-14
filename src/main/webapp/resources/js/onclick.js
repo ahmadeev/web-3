@@ -25,7 +25,7 @@ svg.addEventListener('click', (event) => {
     let xInput = null
     let yInput = null
     let RInput = parseFloat(document.querySelector('.slider_input').value)
-    if (RInput != 0 && RInput != null) {
+    if (RInput !== 0 && RInput != null) {
         // alert(offsetLeft + " " + offsetTop)
         // alert((event.clientX - offsetLeft) + " " + (event.clientY - offsetTop))
         xInput = ((event.clientX - offsetLeft - 25) - 125) / (80 / RInput)

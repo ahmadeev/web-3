@@ -39,13 +39,16 @@ function drawDot(x, y, R, isHit, isEqual) {
 }
 
 function drawDots(lastR) {
+    const is_empty = document.querySelector("tbody tr.ui-datatable-empty-message").length !== 0
+    if (is_empty) return;
 
     const rows = document.querySelectorAll('tbody tr')
+    console.log(rows)
     rows.forEach((row) => {
         if (row != null) {
             var cells = row.querySelectorAll('td')
-            var REqualsLastR = parseFloat(cells[2].innerText) == lastR ? true : false
-            drawDot(parseFloat(cells[0].innerText), parseFloat(cells[1].innerText), lastR, (cells[3].innerText == 'true' ? true : false), REqualsLastR)
+            var REqualsLastR = parseFloat(cells[2].innerText) === lastR
+            drawDot(parseFloat(cells[0].innerText), parseFloat(cells[1].innerText), lastR, (cells[3].innerText === 'true'), REqualsLastR)
         }
     })
 }
