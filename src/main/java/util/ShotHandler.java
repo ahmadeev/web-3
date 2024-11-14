@@ -20,7 +20,7 @@ public class ShotHandler {
 
     private final List<Double> availableX = List.of(-5.0, -4.0, -3.0, -2.0, -1.0, 0.0, 1.0, 2.0, 3.0);
 
-    private final List<Double> availableR = List.of(1.0, 1.25, 1.5, 1.75, 2.0, 2.25, 2.5, 2.75, 3.0, 3.25, 3.5, 3.75, 4.0);
+    private final List<Double> availableR = List.of(2.0, 2.25, 2.5, 2.75, 3.0, 3.25, 3.5, 3.75, 4.0, 4.25, 4.5, 4.75, 5.0);
 
     public ShotHandler() {
         System.out.println("ShotHandler initialized");
@@ -35,7 +35,7 @@ public class ShotHandler {
     }
 
     public boolean isYValid(double y) {
-        return y >= -3.0 && y <= 3.0;
+        return y >= -3.0 && y <= 5.0;
     }
 
     public boolean isRValid(double r) {
@@ -43,13 +43,13 @@ public class ShotHandler {
     }
 
     public boolean isInside(double x, double y, double r) {
-        // 2nd
-        if ((y >= 0) && (x <= 0)) return (y <= r / 2) && (x >= -r);
-        // 3rd
-        if ((y < 0) && (x <= 0)) return (x * x + y * y <= r * r);
-        // 4th
-        if ((y <= 0) && (x > 0)) return (y >= x - r);
         // 1st
+        if ((y >= 0) && (x >= 0)) return (y <= r) && (x <= r);
+        // 2nd
+        if ((y >= 0) && (x <= 0)) return (x * x + y * y <= r * r);
+        // 4th
+        if ((y <= 0) && (x >= 0)) return (y >= 2 * x - r);
+        // 3rd
         return false;
     }
 }

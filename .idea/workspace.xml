@@ -9,16 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="исправил DBHandler.java">
+    <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="исправил еще что-то">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/clock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/draw_graph.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/converter/TextInputCoordinateConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/converter/YCoordinateConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/db/DBHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/DBHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mbean/PageError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mbean/PageError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mbean/ShotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mbean/ShotController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mbean/ShotResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mbean/ShotResults.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/util/ShotHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/ShotHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/template/templHeader.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/template/templHeader.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/onload_script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/onload_script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/redraw_labels.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/redraw_labels.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +28,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="jsf" />
-        <option value="JavaScript File" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -258,7 +257,7 @@
       <workItem from="1730904135665" duration="2719000" />
       <workItem from="1731529011486" duration="5000" />
       <workItem from="1731586608345" duration="8379000" />
-      <workItem from="1731604652115" duration="3192000" />
+      <workItem from="1731604652115" duration="8056000" />
     </task>
     <task id="LOCAL-00001" summary="meow">
       <option name="closed" value="true" />
@@ -500,7 +499,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731605903702</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="исправил еще что-то">
+      <option name="closed" value="true" />
+      <created>1731608406597</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1731608406597</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,6 +534,7 @@
     <MESSAGE value="фикс" />
     <MESSAGE value="пакеты" />
     <MESSAGE value="исправил DBHandler.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="исправил DBHandler.java" />
+    <MESSAGE value="исправил еще что-то" />
+    <option name="LAST_COMMIT_MESSAGE" value="исправил еще что-то" />
   </component>
 </project>

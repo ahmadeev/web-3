@@ -140,7 +140,7 @@
             <div id="leftContent">
 
                 <svg id="graph" width="250" height="250">
-                    <g class="x-grid">
+<!--                    <g class="x-grid">
                         <line stroke="black" x1="0" x2="250" y1="125" y2="125"></line>
                     </g>
                     <g class="y-grid">
@@ -157,14 +157,14 @@
 
                     <polygon fill="white" fill-opacity="0.7" stroke="black" points="125, 125 125, 205 205, 125"></polygon>
                     <polygon fill="white" fill-opacity="0.7" stroke="black" points="125, 125 125, 85 45, 85 45, 125"></polygon>
-<!--                    <path fill="white" fill-opacity="0.7" stroke="black" d="M 125 125, L 85 125, A 40 40, 90, 0, 0, 125, 165, Z"></path>-->
+                    &lt;!&ndash;                    <path fill="white" fill-opacity="0.7" stroke="black" d="M 125 125, L 85 125, A 40 40, 90, 0, 0, 125, 165, Z"></path>&ndash;&gt;
                     <path fill="white" fill-opacity="0.7" stroke="black" d="M 125 125, L 45 125, A 77 77, 90, 0, 0, 125, 205, Z"></path>
 
                     <g class="labels x-labels">
-<!--                        <text x="45" y="115" class="min_R">-R</text>
-                        <text x="90" y="115" class="min_half_R">-R/2</text>
-                        <text x="165" y="140" class="half_R">R/2</text>
-                        <text x="205" y="140" class="R">R</text>-->
+                        &lt;!&ndash;                        <text x="45" y="115" class="min_R">-R</text>
+                                                <text x="90" y="115" class="min_half_R">-R/2</text>
+                                                <text x="165" y="140" class="half_R">R/2</text>
+                                                <text x="205" y="140" class="R">R</text>&ndash;&gt;
 
                         <text x="45" y="115" class="min_R">-2.0</text>
                         <text x="90" y="115" class="min_half_R">-1.0</text>
@@ -172,10 +172,10 @@
                         <text x="205" y="140" class="R">2.0</text>
                     </g>
                     <g class="labels y-labels">
-<!--                        <text x="130" y="205" class="min_R">-R</text>
-                        <text x="130" y="165" class="min_half_R">-R/2</text>
-                        <text x="130" y="80" class="half_R">R/2</text>
-                        <text x="130" y="40" class="R">R</text>-->
+                        &lt;!&ndash;                        <text x="130" y="205" class="min_R">-R</text>
+                                                <text x="130" y="165" class="min_half_R">-R/2</text>
+                                                <text x="130" y="80" class="half_R">R/2</text>
+                                                <text x="130" y="40" class="R">R</text>&ndash;&gt;
 
                         <text x="130" y="205" class="min_R">-2.0</text>
                         <text x="130" y="165" class="min_half_R">-1.0</text>
@@ -192,7 +192,7 @@
                         <line stroke="black" y1="122" y2="128" x1="165" x2="165"></line>
                         <line stroke="black" y1="122" y2="128" x1="85" x2="85"></line>
                         <line stroke="black" y1="122" y2="128" x1="45" x2="45"></line>
-                    </g>
+                    </g>-->
                 </svg>
 
             </div>
@@ -228,11 +228,15 @@
          </ui:define>
 
           <ui:define name="scripts">
+              <h:outputScript name="clock.js" library="js" />
+
+              <h:outputScript name="draw_graph.js" library="js" />
               <h:outputScript name="submit_and_reset_buttons_handler.js" library="js" />
               <h:outputScript name="onclick_event_handler.js" library="js" />
-              <h:outputScript name="onload_script.js" library="js" />
-              <h:outputScript name="redraw_labels.js" library="js" />
               <h:outputScript name="validate_input.js" library="js" />
+              <h:outputScript name="redraw_labels.js" library="js" />
+
+              <h:outputScript name="onload_script.js" library="js" />
           </ui:define>
 
       </ui:composition>

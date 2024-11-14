@@ -20,7 +20,7 @@ function addEventListeners(types, element, callback) {
 }
 
 function redrawLabels(r) {
-    if (parseFloat(r) === 0 || r == null) {return}
+    if (parseFloat(r) === 0 || r == null) return;
     for(let i = 0; i < 2; i++) {
         neg_R[i].childNodes[0].nodeValue = "-" + r
         pos_R[i].childNodes[0].nodeValue = r

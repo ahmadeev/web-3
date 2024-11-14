@@ -1,22 +1,41 @@
-window.onload = function(){
-    let clock = document.getElementById("clock");
+//----------------------------------------тут задаются треугольник и четырехугольник
+let polygon_points = {
+    1: form_polygon_string([
+        `${CENTER}, ${CENTER}`,
+        `${X_R}, ${CENTER}`,
+        `${X_R}, ${Y_R}`,
+        `${CENTER}, ${Y_R}`
 
-    let now = new Date();
-    clock.innerHTML = now.toLocaleTimeString();
-    window.setInterval(function(){
-        let now = new Date();
-        clock.innerHTML = now.toLocaleTimeString();
-    },13000);
+    ]),
+    4: form_polygon_string([
+        `${CENTER}, ${CENTER}`,
+        `${CENTER}, ${Y_MINUS_R}`,
+        `${X_HALF_R}, ${CENTER}`,
+    ]),
+}
 
+//----------------------------------------тут задается четверть круга
+let path_points = {
+    2: form_path_string({
+        "L"     : `${CENTER}, ${Y_R}`,
+        "A"     : `${R}, ${R}`,
+        "ANGLE" : "0",
+        "END"   : `${X_MINUS_R}, ${CENTER}`
+    }),
+}
+
+window.onload = async function(){
+    //  Навешиваем слушатели событий на слайдер
     const slider = document.querySelector('.slider')
     slider.addEventListener("mousedown", recursive)
 
     //  Отрисовка точек после перезагрузки
     //  Изменение подписей на графике
     try {
+        const svg = document.querySelector('svg')
+        draw_graph(svg, polygon_points, path_points)
         let rows = document.querySelectorAll('tbody tr')
         let lastR = (rows[rows.length - 1].querySelectorAll('td'))[2].innerText
-
         redrawLabels(lastR)
         drawDots(parseFloat(lastR))
     } catch (exception) {
