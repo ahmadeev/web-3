@@ -34,7 +34,7 @@ function form_path_string(d) {
 }
 
 //  функция отрисовки графика
-function draw_graph(svg, polygon_points, path_points) {
+async function draw_graph(svg, polygon_points, path_points) {
     console.log("Начало отрисовки графика")
     let fill_color = "white"
     let stroke_color = "black"
@@ -171,6 +171,7 @@ function draw_graph(svg, polygon_points, path_points) {
     });
 
     console.log("График успешно отрисован!")
+    return Promise.resolve();
 }
 
 //  функция отрисовки треугольника или прямоугольника (polygon)

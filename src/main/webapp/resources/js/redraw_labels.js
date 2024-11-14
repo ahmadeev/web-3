@@ -1,9 +1,9 @@
 //  функции добавления слушателей событий (множества)
-
-const neg_R = document.querySelectorAll('.min_R')
-const neg_half_R = document.querySelectorAll('.min_half_R')
-const pos_R = document.querySelectorAll('.R')
-const pos_half_R = document.querySelectorAll('.half_R')
+//  (добавляются в window.onload)
+let neg_R;
+let neg_half_R;
+let pos_R;
+let pos_half_R;
 
 //  callback обязательно void
 function addEventListeners(types, element, callback) {

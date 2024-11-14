@@ -33,7 +33,13 @@ window.onload = async function(){
     //  Изменение подписей на графике
     try {
         const svg = document.querySelector('svg')
-        draw_graph(svg, polygon_points, path_points)
+        await draw_graph(svg, polygon_points, path_points)
+
+        neg_R = document.querySelectorAll('.min_R')
+        neg_half_R = document.querySelectorAll('.min_half_R')
+        pos_R = document.querySelectorAll('.R')
+        pos_half_R = document.querySelectorAll('.half_R')
+
         let rows = document.querySelectorAll('tbody tr')
         let lastR = (rows[rows.length - 1].querySelectorAll('td'))[2].innerText
         redrawLabels(lastR)
