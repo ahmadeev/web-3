@@ -1,17 +1,16 @@
+//  функции добавления слушателей событий (множества)
+
 const neg_R = document.querySelectorAll('.min_R')
 const neg_half_R = document.querySelectorAll('.min_half_R')
 const pos_R = document.querySelectorAll('.R')
 const pos_half_R = document.querySelectorAll('.half_R')
 
-function addEventListeners(types, element) {
+//  callback обязательно void
+function addEventListeners(types, element, callback) {
     try {
-        const RInput = document.querySelector('.slider_input')
         types.split(" ").forEach(function(e){
             element.addEventListener(e, function () {
-                console.log(RInput, RInput.value)
-                redrawLabels(RInput.value)
-                clearDots()
-                drawDots(parseFloat(RInput.value))
+                callback();
             });
         })
         return 0
@@ -33,6 +32,11 @@ function redrawLabels(r) {
 
 function recursive() {
     const slider = document.querySelector('.slider')
-    addEventListeners("mousemove touchmove click mouseover mouseout mousedown mouseup", slider)
+    addEventListeners("mousemove touchmove click mouseover mouseout mousedown mouseup", slider, () => {
+        const RInput = document.querySelector('.slider_input')
+        redrawLabels(RInput.value)
+        clearDots()
+        drawDots(parseFloat(RInput.value))
+    })
     slider.removeEventListener("mousedown", recursive)
 }

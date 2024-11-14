@@ -1,6 +1,5 @@
 let submit = document.querySelector('.form_submit_button')
 submit.addEventListener("click", function() {
-
     let xInput = parseFloat(document.querySelector('#form_x_container input[type="hidden"]').value)
     let yInput = parseFloat(document.querySelector('.form_input_y').value)
     let RInput = parseFloat(document.querySelector('.slider_input').value)
@@ -13,16 +12,13 @@ submit.addEventListener("click", function() {
     } else alert('Coordinates are not valid!' + ' (x: ' + xInput.toFixed(2) + ', y: ' + yInput.toFixed(2) + ', R: ' + RInput.toFixed(2) + ')')
 })
 
-let reset = document.querySelector('.form_reset_button')
-reset.addEventListener("click", resetButton)
-
-const zero_to_R_offset = 80
-const svg_size_parameter = 250
+const ZERO_TO_R_OFFSET = 80
+const SVG_SIZE_PARAMETER = 250
 
 function drawDot(x, y, R, isHit, isEqual) {
     let svg = document.querySelector('svg')
-    x += zero_to_R_offset * x / R + (svg_size_parameter / 2)
-    y += -zero_to_R_offset * y / R + (svg_size_parameter / 2)
+    x += ZERO_TO_R_OFFSET * x / R + (SVG_SIZE_PARAMETER / 2)
+    y += -ZERO_TO_R_OFFSET * y / R + (SVG_SIZE_PARAMETER / 2)
 
     const dot = document.createElementNS("http://www.w3.org/2000/svg", 'circle')
     dot.setAttributeNS(null, 'cx', x);
@@ -52,18 +48,19 @@ function drawDots(lastR) {
     })
 }
 
+let reset = document.querySelector('.form_reset_button')
+reset.addEventListener("click", resetButton)
+
+function clearDots() {
+    const dots = document.querySelectorAll('.target-dot');
+    dots.forEach(dot => {dot.remove()})
+}
+
 function resetButton() {
     clearDots()
 
     const rows = document.querySelectorAll('tbody tr');
     rows.forEach(row => {row.remove()})
-
-/*    for(let i=0; i<2; i++) {
-        neg_R[i].childNodes[0].nodeValue = '-R'
-        neg_half_R[i].childNodes[0].nodeValue = '-R/2'
-        pos_R[i].childNodes[0].nodeValue = 'R'
-        pos_half_R[i].childNodes[0].nodeValue = 'R/2'
-    }*/
 
     for(let i = 0; i < 2; i++) {
         neg_R[i].childNodes[0].nodeValue = '-2.0'
@@ -71,9 +68,4 @@ function resetButton() {
         pos_R[i].childNodes[0].nodeValue = '2.0'
         pos_half_R[i].childNodes[0].nodeValue = '1.0'
     }
-}
-
-function clearDots() {
-    const dots = document.querySelectorAll('.target-dot');
-    dots.forEach(dot => {dot.remove()})
 }

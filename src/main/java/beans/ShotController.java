@@ -4,13 +4,15 @@ import jakarta.faces.bean.ManagedBean;
 import jakarta.faces.bean.ManagedProperty;
 import jakarta.faces.bean.RequestScoped;
 import jakarta.inject.Inject;
+import jakarta.inject.Named;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-@ManagedBean
+// @Named // новое
+@ManagedBean(name="shotController")
 @RequestScoped
 public class ShotController {
     @Getter
@@ -23,16 +25,9 @@ public class ShotController {
     @Inject
     private DBHandler dbHandler;
 
+    @Getter @Setter
     @ManagedProperty(value = "#{shotResults}")
     private ShotResults shotResults;
-
-    public ShotResults getShotResults() {
-        return shotResults;
-    }
-
-    public void setShotResults(ShotResults shotResults) {
-        this.shotResults = shotResults;
-    }
 
     public ShotController() {
         System.out.println("Shot controller bean started!");

@@ -1,6 +1,7 @@
 package beans;
 
 import jakarta.annotation.PostConstruct;
+import jakarta.faces.bean.ApplicationScoped;
 import jakarta.faces.bean.SessionScoped;
 import jakarta.faces.bean.ManagedBean;
 import jakarta.inject.Inject;
@@ -11,7 +12,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 @ManagedBean(name = "shotResults", eager = true)
-@SessionScoped
+@ApplicationScoped
 public class ShotResults implements Serializable {
     @Getter @Setter
     private ArrayList<Shot> results;

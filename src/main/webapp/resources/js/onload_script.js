@@ -1,6 +1,7 @@
 window.onload = function(){
-    let now = new Date();
     let clock = document.getElementById("clock");
+
+    let now = new Date();
     clock.innerHTML = now.toLocaleTimeString();
     window.setInterval(function(){
         let now = new Date();
@@ -18,5 +19,7 @@ window.onload = function(){
 
         redrawLabels(lastR)
         drawDots(parseFloat(lastR))
-    } finally {}
+    } catch (exception) {
+        console.log("Какая-то ошибка, блин: " + exception)
+    }
 };

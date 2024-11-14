@@ -61,8 +61,7 @@
 
                     </div>-->
 
-                    <div id="form_x_container" style="width: 140px; height: 110px">
-
+<!--                    <div id="form_x_container" style="width: 140px; height: 110px">
                         <label>x:</label><br/>
 
                         <label for="x_input_1">-2.0</label>
@@ -77,8 +76,12 @@
                         <h:selectBooleanCheckbox value="0" id="x_input_5" />
                         <label for="x_input_1">0.5</label>
                         <h:selectBooleanCheckbox value="0.5" id="x_input_6" /><br/>
+                    </div>-->
 
-
+                    <div id="form_x_container" style="margin-bottom: 10px; margin-top: 10px; height: 40px; width: 130px">
+                        <h:outputLabel for="xType" value="y value:" />
+                        <h:inputText class="form_input_y" id="xType" converter="YCoordinateConverter" value="#{shotController.shot.x}">
+                        </h:inputText>
                     </div>
 
 
@@ -225,12 +228,11 @@
          </ui:define>
 
           <ui:define name="scripts">
-              <h:outputScript name="dot.js" library="js" />
-              <h:outputScript name="onclick.js" library="js" />
-              <h:outputScript name="clock.js" library="js" />
-              <h:outputScript name="redrawLabels.js" library="js" />
-              <h:outputScript name="validate.js" library="js" />
-              <h:outputScript name="areaCheck.js" library="js" />
+              <h:outputScript name="submit_and_reset_buttons_handler.js" library="js" />
+              <h:outputScript name="onclick_event_handler.js" library="js" />
+              <h:outputScript name="onload_script.js" library="js" />
+              <h:outputScript name="redraw_labels.js" library="js" />
+              <h:outputScript name="validate_input.js" library="js" />
           </ui:define>
 
       </ui:composition>
