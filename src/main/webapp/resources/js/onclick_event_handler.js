@@ -1,7 +1,10 @@
 //  слушаем клики на свг: проверяем наличие R и отправляем запрос в случае успеха
-//  на изменение в дереве #centerContent добавляем точку из последней строки таблицы
+//  на изменение в дереве #centerContent добавляем точку из n (по количеству отмеченных checkbox) последних строк таблицы
 let svg = document.querySelector('svg')
-let observer = new MutationObserver(function() {drawDotFromLastRow()})
+let observer = new MutationObserver(function() {
+    let xInput = document.querySelectorAll('div#form_x_container input[type="checkbox"]:checked')
+    drawDotsFromLastNRows(xInput.length);
+})
 // используем константы из submit_and_reset_buttons_handler.js
 svg.addEventListener('click', (event) => {
     console.log("Клик на область графика!")
@@ -42,4 +45,24 @@ function drawDotFromLastRow() {
     let isHit = cells[3].innerHTML === 'true'
 
     drawDot(x, y, r, isHit, true)
+}
+
+function drawDotsFromLastNRows(number) {
+    let rows = document.querySelectorAll('tbody tr')
+
+    if (number > rows.length) {
+        console.log("Запрос на отрисовку точек количеством больше, чем количество строк")
+        return;
+    }
+
+    for (let counter = 0; counter < number; counter++) {
+        let cells = rows[rows.length - 1 - counter].querySelectorAll('td')
+
+        let x = parseFloat(cells[0].innerHTML)
+        let y = parseFloat(cells[1].innerHTML)
+        let r = parseFloat(cells[2].innerHTML)
+        let isHit = cells[3].innerHTML === 'true'
+
+        drawDot(x, y, r, isHit, true)
+    }
 }
