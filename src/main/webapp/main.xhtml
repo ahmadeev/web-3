@@ -10,14 +10,14 @@
 
       <ui:composition template="/template.xhtml">
 
+          <ui:define name="msg">
+              <p:messages style="color: red;" id="globalMessages" globalOnly="true" showDetail="true" showSummary="true" />
+          </ui:define>
+
          <ui:define name="content">
             <div id="rightContent">
 
                 <h:form style="width: 80%;">
-
-                    <div id="msg" style="height: auto; width: 100%">
-                        <p:messages style="color: red;" id="globalMessages" globalOnly="true" showDetail="true" showSummary="true" />
-                    </div>
 
                     <div id="form_x_container" style="width: 80%; height: 60px">
 
@@ -49,7 +49,6 @@
                     <div id="form_R_container" style="width: 80%; height: 70px">
                         <h:outputLabel for="RType" value="R value:" /><br/>
                         <h:inputText class="slider_input" id="RType" value="#{shotController.inputShot.r}">
-
                             <f:validator validatorId="customDoubleRangeValidator" />
                         </h:inputText><br/>
 
@@ -60,7 +59,7 @@
 
                     <div class="formLine" style="width: 130px; height: 40px">
                         <h:commandButton styleClass="form_submit_button button" value="check" action="#{shotController.getManageRequest}">
-                            <f:ajax execute="@form" render="tableResults @form msg"/>
+                            <f:ajax execute="@form" render="tableResults globalMessages"/>
                             <f:param name="formSource" value="form" />
                         </h:commandButton>
 

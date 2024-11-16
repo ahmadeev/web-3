@@ -20,4 +20,10 @@
             <redirect/>
         </navigation-case>
     </navigation-rule>
+
+<!--    не работает мне кажется
+    <validator>
+        <validator-id>customDoubleRangeValidator</validator-id>
+        <validator-class>validators.CustomDoubleRangeValidator</validator-class>
+    </validator>-->
 </faces-config>

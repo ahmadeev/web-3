@@ -9,15 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="работает но без валидации я думаю">
-      <change afterPath="$PROJECT_DIR$/src/main/java/mbean/FormBean.java" afterDir="false" />
+    <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="пять что-то">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/template/templMessages.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/converter/YCoordinateConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/converter/YCoordinateConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mbean/ShotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mbean/ShotController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/ShotHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/ShotHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/validators/CheckboxGroupValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validators/CustomDoubleRangeValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/onclick_event_handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/onclick_event_handler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/onload_script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/onload_script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/submit_and_reset_buttons_handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/submit_and_reset_buttons_handler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/template.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/template.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +28,7 @@
         <option value="jsf" />
         <option value="JavaScript File" />
         <option value="Class" />
+        <option value="facelets" />
       </list>
     </option>
   </component>
@@ -577,7 +576,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731727584220</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="пять что-то">
+      <option name="closed" value="true" />
+      <created>1731732971642</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1731732971642</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -611,6 +618,7 @@
     <MESSAGE value="ошибку исправил" />
     <MESSAGE value="интереснее с валидацией" />
     <MESSAGE value="работает но без валидации я думаю" />
-    <option name="LAST_COMMIT_MESSAGE" value="работает но без валидации я думаю" />
+    <MESSAGE value="пять что-то" />
+    <option name="LAST_COMMIT_MESSAGE" value="пять что-то" />
   </component>
 </project>

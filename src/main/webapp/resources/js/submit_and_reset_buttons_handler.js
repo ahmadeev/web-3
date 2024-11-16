@@ -1,22 +1,3 @@
-let submit = document.querySelector('.form_submit_button')
-submit.addEventListener("click", function() {
-    let xInput = document.querySelectorAll('div#form_x_container input[type="checkbox"]:checked')
-    let yInput = parseFloat(document.querySelector('.form_input_y').value)
-    let RInput = parseFloat(document.querySelector('.slider_input').value)
-
-    if (xInput.length !== 0 && isYValid(yInput) && isRValid(RInput)) {
-        formObserver.observe(document.querySelector('#centerContent'), {
-            childList : true,
-            subtree: true
-        })
-    } else alert(
-        'Coordinates are not valid!\n' +
-        'x must be selected,\n' +
-        'y must be lower than 5 and greater than -3,\n' +
-        'r must be selected.'
-    )
-})
-
 const ZERO_TO_R_OFFSET = 80
 const SVG_SIZE_PARAMETER = 250
 
@@ -54,8 +35,23 @@ function drawDots(lastR) {
     })
 }
 
-let reset = document.querySelector('.form_reset_button')
-reset.addEventListener("click", resetButton)
+function submitButton() {
+    let xInput = document.querySelectorAll('div#form_x_container input[type="checkbox"]:checked')
+    let yInput = parseFloat(document.querySelector('.form_input_y').value)
+    let RInput = parseFloat(document.querySelector('.slider_input').value)
+
+    if (xInput.length !== 0 && isYValid(yInput) && isRValid(RInput)) {
+        formObserver.observe(document.querySelector('#centerContent'), {
+            childList : true,
+            subtree: true
+        })
+    } else alert(
+        'Coordinates are not valid!\n' +
+        'x must be selected,\n' +
+        'y must be lower than 5 and greater than -3,\n' +
+        'r must be selected.'
+    )
+}
 
 function clearDots() {
     const dots = document.querySelectorAll('.target-dot');

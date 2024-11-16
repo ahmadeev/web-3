@@ -25,6 +25,13 @@ let path_points = {
 }
 
 window.onload = async function(){
+
+    let submit = document.querySelector('.form_submit_button')
+    submit.addEventListener("click", submitButton)
+
+    let reset = document.querySelector('.form_reset_button')
+    reset.addEventListener("click", resetButton)
+
     //  Навешиваем слушатели событий на слайдер
     const slider = document.querySelector('.slider')
     slider.addEventListener("mousedown", recursive)
