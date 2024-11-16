@@ -12,18 +12,31 @@ import java.math.BigDecimal;
 public class InputShot {
 
     private BigDecimal x;
-
-    private BigDecimal y;
-
+    private Boolean x1 = false;
+    private Boolean x2 = false;
+    private Boolean x3 = false;
+    private Boolean x4 = false;
+    private Boolean x5 = false;
+    private Boolean x6 = false;
+    private Double y;
     private BigDecimal R;
 
     public InputShot() {
         System.out.println("Object InputShot created");
     }
 
-    public InputShot(InputShot shot) {
-        this.x = shot.x;
-        this.y = shot.y;
-        this.R = shot.R;
+    @Override
+    public String toString() {
+        return "inputShot{" +
+                "x=" + x +
+                ", x1=" + x1 +
+                ", x2=" + x2 +
+                ", x3=" + x3 +
+                ", x4=" + x4 +
+                ", x5=" + x5 +
+                ", x6=" + x6 +
+                ", y=" + y +
+                ", r=" + R +
+                "}";
     }
 }
