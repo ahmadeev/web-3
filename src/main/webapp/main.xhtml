@@ -15,52 +15,6 @@
 
                 <h:form>
 
-<!--                    <div id="form_x_container" style="width: 140px; height: 110px">
-                        <div>
-                            <h:inputHidden id="xType" class="form_input_x" value="#{shotController.inputShot.x}"/>
-                            <h:outputText id="form_output_x" value="x value: #{shotController.inputShot.x}"/>
-                        </div>
-
-                        <div class="button_block">
-                            <h:commandButton value="-5" type="button" styleClass="button input_x_button" >
-                                <f:ajax render="xType form_output_x" listener="#{shotController.inputShot.setX(-5)}"/>
-                            </h:commandButton>
-
-                            <h:commandButton value="-4" type="button" styleClass="button input_x_button" >
-                                <f:ajax render="xType form_output_x" listener="#{shotController.inputShot.setX(-4)}"/>
-                            </h:commandButton>
-
-                            <h:commandButton value="-3" type="button" styleClass="button input_x_button" >
-                                <f:ajax render="xType form_output_x" listener="#{shotController.inputShot.setX(-3)}"/>
-                            </h:commandButton><br/>
-
-                            <h:commandButton value="-2" type="button" styleClass="button input_x_button" >
-                                <f:ajax render="xType form_output_x" listener="#{shotController.inputShot.setX(-2)}"/>
-                            </h:commandButton>
-
-                            <h:commandButton value="-1" type="button" styleClass="button input_x_button" >
-                                <f:ajax render="xType form_output_x" listener="#{shotController.inputShot.setX(-1)}"/>
-                            </h:commandButton>
-
-                            <h:commandButton value="0" type="button" styleClass="button input_x_button" >
-                                <f:ajax render="xType form_output_x" listener="#{shotController.inputShot.setX(0)}"/>
-                            </h:commandButton><br/>
-
-                            <h:commandButton value="1" type="button" styleClass="button input_x_button" >
-                                <f:ajax render="xType form_output_x" listener="#{shotController.inputShot.setX(1)}"/>
-                            </h:commandButton>
-
-                            <h:commandButton value="2" type="button" styleClass="button input_x_button" >
-                                <f:ajax render="xType form_output_x" listener="#{shotController.inputShot.setX(2)}"/>
-                            </h:commandButton>
-
-                            <h:commandButton value="3" type="button" styleClass="button input_x_button" >
-                                <f:ajax render="xType form_output_x" listener="#{shotController.inputShot.setX(3)}"/>
-                            </h:commandButton>
-                        </div>
-
-                    </div>-->
-
                     <div id="form_x_container" style="width: 140px; height: 110px">
                         <label>x:</label><br/>
 
@@ -75,7 +29,7 @@
                         <label for="x_input_5">0.0</label>
                         <h:selectBooleanCheckbox value="#{shotController.inputShot.x5}" id="x_input_5" />
                         <label for="x_input_6">0.5</label>
-                        <h:selectBooleanCheckbox value="#{shotController.inputShot.x6}" id="x_input_6" /><br/>
+                        <h:selectBooleanCheckbox value="#{shotController.inputShot.x6}" id="x_input_6" validator="#{shotController.validateX}" /><br/>
                     </div>
 
 

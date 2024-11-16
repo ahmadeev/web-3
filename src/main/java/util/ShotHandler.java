@@ -18,7 +18,7 @@ public class ShotHandler {
     private static final BigDecimal MIN_R = new BigDecimal(2);
     private static final BigDecimal MAX_R = new BigDecimal(5);
 
-    private final List<Double> availableX = List.of(-5.0, -4.0, -3.0, -2.0, -1.0, 0.0, 1.0, 2.0, 3.0);
+    private final List<Double> availableX = List.of(-2.0, -1.5, -1.0, -0.5, 0.0, 0.5);
 
     private final List<Double> availableR = List.of(2.0, 2.25, 2.5, 2.75, 3.0, 3.25, 3.5, 3.75, 4.0, 4.25, 4.5, 4.75, 5.0);
 
@@ -27,18 +27,28 @@ public class ShotHandler {
     }
 
     public boolean isValid(double x, double y, double r) {
-        return isXValid(x) && isYValid(y) && isRValid(r);
+        return (isXValid(x) || isXValidStrict(x))
+                && isYValid(y)
+                && (isRValid(r) || isRValidStrict(r));
     }
 
     public boolean isXValid(double x) {
+        return false;
+    }
+
+    public boolean isXValidStrict(double x) {
         return availableX.contains(x);
     }
 
     public boolean isYValid(double y) {
-        return y >= -3.0 && y <= 5.0;
+        return y > -3.0 && y < 5.0;
     }
 
     public boolean isRValid(double r) {
+        return false;
+    }
+
+    public boolean isRValidStrict(double r) {
         return availableR.contains(r);
     }
 

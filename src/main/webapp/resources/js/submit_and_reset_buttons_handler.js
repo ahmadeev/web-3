@@ -1,7 +1,5 @@
 let submit = document.querySelector('.form_submit_button')
 submit.addEventListener("click", function() {
-    // для x надо придумать что-то
-    // let xInput = parseFloat(document.querySelector('#form_x_container input[type="hidden"]').value)
     let xInput = document.querySelectorAll('div#form_x_container input[type="checkbox"]:checked')
     let yInput = parseFloat(document.querySelector('.form_input_y').value)
     let RInput = parseFloat(document.querySelector('.slider_input').value)
