@@ -9,13 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="пять что-то">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/template/templMessages.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="починил, жсф г">
       <change beforePath="$PROJECT_DIR$/src/main/webapp/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/onload_script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/onload_script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/submit_and_reset_buttons_handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/submit_and_reset_buttons_handler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/template.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/template.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -584,7 +579,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731732971642</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="починил, жсф г">
+      <option name="closed" value="true" />
+      <created>1731734787670</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1731734787670</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -619,6 +622,7 @@
     <MESSAGE value="интереснее с валидацией" />
     <MESSAGE value="работает но без валидации я думаю" />
     <MESSAGE value="пять что-то" />
-    <option name="LAST_COMMIT_MESSAGE" value="пять что-то" />
+    <MESSAGE value="починил, жсф г" />
+    <option name="LAST_COMMIT_MESSAGE" value="починил, жсф г" />
   </component>
 </project>

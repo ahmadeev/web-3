@@ -45,12 +45,12 @@ function submitButton() {
             childList : true,
             subtree: true
         })
-    } else alert(
+    } /*else alert(
         'Coordinates are not valid!\n' +
         'x must be selected,\n' +
         'y must be lower than 5 and greater than -3,\n' +
         'r must be selected.'
-    )
+    )*/
 }
 
 function clearDots() {
