@@ -1,14 +1,17 @@
 //  слушаем клики на свг: проверяем наличие R и отправляем запрос в случае успеха
 //  на изменение в дереве #centerContent добавляем точку из n (по количеству отмеченных checkbox) последних строк таблицы
 let svg = document.querySelector('svg')
-let observer = new MutationObserver(function() {
+let formObserver = new MutationObserver(function() {
     let xInput = document.querySelectorAll('div#form_x_container input[type="checkbox"]:checked')
     drawDotsFromLastNRows(xInput.length);
+})
+let clickObserver = new MutationObserver(function() {
+    drawDotFromLastRow();
 })
 // используем константы из submit_and_reset_buttons_handler.js
 svg.addEventListener('click', (event) => {
     console.log("Клик на область графика!")
-    observer.observe(document.querySelector('#centerContent'), {
+    clickObserver.observe(document.querySelector('#centerContent'), {
         childList : true,
         subtree: true
     })

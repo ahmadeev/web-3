@@ -105,6 +105,8 @@ public class ShotController {
         if (inputShot.getX5()) xs.add(0.0);
         if (inputShot.getX6()) xs.add(0.5);
 
+        System.out.println(Arrays.toString(xs.toArray()));
+
         if (xs.isEmpty()) {
             System.out.println("pupupu");
             FacesMessage message = new FacesMessage("Please, select at least one checkbox!");

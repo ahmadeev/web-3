@@ -10,10 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="интереснее с валидацией">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/template.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/template.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mbean/ShotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mbean/ShotController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/onclick_event_handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/onclick_event_handler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/submit_and_reset_buttons_handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/submit_and_reset_buttons_handler.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

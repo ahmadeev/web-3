@@ -5,7 +5,7 @@ submit.addEventListener("click", function() {
     let RInput = parseFloat(document.querySelector('.slider_input').value)
 
     if (xInput.length !== 0 && isYValid(yInput) && isRValid(RInput)) {
-        observer.observe(document.querySelector('#centerContent'), {
+        formObserver.observe(document.querySelector('#centerContent'), {
             childList : true,
             subtree: true
         })
