@@ -9,15 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="ошибку исправил">
-      <change afterPath="$PROJECT_DIR$/src/main/java/validators/CheckboxGroupValidator.java" afterDir="false" />
+    <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="интереснее с валидацией">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mbean/ShotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mbean/ShotController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/InputShot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/InputShot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/ShotHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/ShotHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/onload_script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/onload_script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/submit_and_reset_buttons_handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/submit_and_reset_buttons_handler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/template.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/template.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/onclick_event_handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/onclick_event_handler.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,7 +254,7 @@
       <workItem from="1731529011486" duration="5000" />
       <workItem from="1731586608345" duration="8379000" />
       <workItem from="1731604652115" duration="9107000" />
-      <workItem from="1731713677612" duration="10985000" />
+      <workItem from="1731713677612" duration="12100000" />
     </task>
     <task id="LOCAL-00001" summary="meow">
       <option name="closed" value="true" />
@@ -556,7 +552,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731720675814</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="интереснее с валидацией">
+      <option name="closed" value="true" />
+      <created>1731724970348</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1731724970348</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -588,6 +592,7 @@
     <MESSAGE value="добавил инпуты по заданию, ищу ошибку с графиком" />
     <MESSAGE value="ошибку нашел, пытаюсь исправить" />
     <MESSAGE value="ошибку исправил" />
-    <option name="LAST_COMMIT_MESSAGE" value="ошибку исправил" />
+    <MESSAGE value="интереснее с валидацией" />
+    <option name="LAST_COMMIT_MESSAGE" value="интереснее с валидацией" />
   </component>
 </project>

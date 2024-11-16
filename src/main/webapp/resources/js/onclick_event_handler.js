@@ -22,8 +22,10 @@ svg.addEventListener('click', (event) => {
     let RInput = parseFloat(document.querySelector('.slider_input').value)
 
     if (RInput !== 0 && RInput != null) {
-        xInput = ((event.clientX - offsetLeft - 25) - SVG_SIZE_PARAMETER / 2) / (ZERO_TO_R_OFFSET / RInput)
-        yInput = ((event.clientY - offsetTop - 25) - SVG_SIZE_PARAMETER / 2) / (-ZERO_TO_R_OFFSET / RInput)
+        let someXOffset = 25
+        let someYOffset = 25
+        xInput = ((event.clientX - offsetLeft - someXOffset) - SVG_SIZE_PARAMETER / 2) / (ZERO_TO_R_OFFSET / RInput)
+        yInput = ((event.clientY - offsetTop - someYOffset) - SVG_SIZE_PARAMETER / 2) / (-ZERO_TO_R_OFFSET / RInput)
         if (isYValid(yInput) && isRValid(RInput)) {
             console.log("Переданные значения валидны")
             document.querySelector('.input_x').value = xInput
