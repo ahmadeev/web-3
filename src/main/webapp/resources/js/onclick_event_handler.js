@@ -36,12 +36,17 @@ svg.addEventListener('click', (event) => {
             document.querySelector('.input_r').value = RInput
             document.querySelector('.button-hidden').click()
             console.log("Запрос был отправлен!")
-        } else alert('Coordinates are not valid!' + ' (x: ' + xInput.toFixed(2) + ', y: ' + yInput.toFixed(2) + ', R: ' + RInput.toFixed(2) + ')')
-    } else alert('R is not set!')
+        } //else alert('Coordinates are not valid!' + ' (x: ' + xInput.toFixed(2) + ', y: ' + yInput.toFixed(2) + ', R: ' + RInput.toFixed(2) + ')')
+    } //else alert('R is not set!')
 })
 
 function drawDotFromLastRow() {
     let rows = document.querySelectorAll('tbody tr')
+    let empty_message = document.querySelector("tbody tr.ui-datatable-empty-message")
+
+    const is_empty = empty_message !== null || rows.length === 0
+    if (is_empty) return;
+
     let cells = rows[rows.length - 1].querySelectorAll('td')
 
     let x = parseFloat(cells[0].innerHTML)
@@ -54,6 +59,10 @@ function drawDotFromLastRow() {
 
 function drawDotsFromLastNRows(number) {
     let rows = document.querySelectorAll('tbody tr')
+    let empty_message = document.querySelector("tbody tr.ui-datatable-empty-message")
+
+    const is_empty = empty_message !== null || rows.length === 0
+    if (is_empty) return;
 
     if (number > rows.length) {
         console.log("Запрос на отрисовку точек количеством больше, чем количество строк")

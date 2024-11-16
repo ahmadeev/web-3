@@ -9,14 +9,14 @@ import java.util.List;
 @Getter
 @Singleton
 public class ShotHandler {
-    private static final BigDecimal MIN_X = new BigDecimal(-2);
-    private static final BigDecimal MAX_X = new BigDecimal("0.5");
+    private static final double MIN_X = -2;
+    private static final double MAX_X = 0.5;
 
-    private static final BigDecimal MIN_Y = new BigDecimal(-3);
-    private static final BigDecimal MAX_Y = new BigDecimal(5);
+    private static final double MIN_Y = -3;
+    private static final double MAX_Y = 5;
 
-    private static final BigDecimal MIN_R = new BigDecimal(2);
-    private static final BigDecimal MAX_R = new BigDecimal(5);
+    private static final double MIN_R = 2;
+    private static final double MAX_R = 5;
 
     private final List<Double> availableX = List.of(-2.0, -1.5, -1.0, -0.5, 0.0, 0.5);
 
@@ -33,7 +33,7 @@ public class ShotHandler {
     }
 
     public boolean isXValid(double x) {
-        return false;
+        return x >= MIN_X && x <= MAX_X;
     }
 
     public boolean isXValidStrict(double x) {
@@ -41,11 +41,11 @@ public class ShotHandler {
     }
 
     public boolean isYValid(double y) {
-        return y > -3.0 && y < 5.0;
+        return y > MIN_Y && y < MAX_Y;
     }
 
     public boolean isRValid(double r) {
-        return false;
+        return r >= MIN_R && r <= MAX_R;
     }
 
     public boolean isRValidStrict(double r) {

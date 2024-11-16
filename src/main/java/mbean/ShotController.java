@@ -8,6 +8,7 @@ import jakarta.faces.bean.ManagedProperty;
 import jakarta.faces.bean.RequestScoped;
 import jakarta.faces.component.UIComponent;
 import jakarta.faces.context.FacesContext;
+import jakarta.faces.convert.ConverterException;
 import jakarta.faces.validator.ValidatorException;
 import jakarta.inject.Inject;
 import lombok.Getter;
@@ -52,47 +53,67 @@ public class ShotController {
     }
 
     public void getManageRequest() {
-        System.out.println(inputShot.toString());
 
-        double x;
-        double y = inputShot.getY();
-        double r = inputShot.getR().doubleValue();
+        try {
 
-        ArrayList<Double> xs = new ArrayList<>();
-        if (inputShot.getX1()) xs.add(-2.0);
-        if (inputShot.getX2()) xs.add(-1.5);
-        if (inputShot.getX3()) xs.add(-1.0);
-        if (inputShot.getX4()) xs.add(-0.5);
-        if (inputShot.getX5()) xs.add(0.0);
-        if (inputShot.getX6()) xs.add(0.5);
+            System.out.println(inputShot.toString());
 
-        if (xs.isEmpty()) {
-            xs.add(inputShot.getX().doubleValue());
-        }
+            double x;
+            double y = inputShot.getY();
+            double r = inputShot.getR().doubleValue();
 
-        System.out.println(Arrays.toString(xs.toArray()));
+            if (!shotHandler.isRValidStrict(r) || !shotHandler.isRValid(r)) {
+                FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "", "R: Невалидное значение!");
+                throw new ValidatorException(msg);
+            }
 
-        for (double xi : xs) {
-            x = xi;
-            boolean isHit = shotHandler.isInside(x, y, r);
-            if (shotHandler.isYValid(y) && shotHandler.isRValidStrict(r)) {
-                long date = (new Date()).getTime();
-                String currentTime = sdf.format(date);
-                Shot newShot = new Shot(
-                        decimalTransform(x, 2),
-                        decimalTransform(y, 2),
-                        decimalTransform(r, 2),
-                        isHit,
-                        currentTime
-                );
+            String formSource = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("formSource");
+            ArrayList<Double> xs = new ArrayList<>();
 
-                shotResults.getResults().add(newShot);
-                dbHandler.create(newShot);
+            if (formSource.equals("form")) {
+                if (inputShot.getX1()) xs.add(-2.0);
+                if (inputShot.getX2()) xs.add(-1.5);
+                if (inputShot.getX3()) xs.add(-1.0);
+                if (inputShot.getX4()) xs.add(-0.5);
+                if (inputShot.getX5()) xs.add(0.0);
+                if (inputShot.getX6()) xs.add(0.5);
+            } else if (formSource.equals("graph")) {
+                xs.add(inputShot.getX().doubleValue());
+            }
 
-                System.out.println(newShot);
-                System.out.println(shotResults.getResults());
+            if (xs.isEmpty()) {
+                FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "", "X: Выберите хотя бы одно значение!");
+                throw new ValidatorException(msg);
+            }
 
-            } else System.out.println("Invalid input!");
+            for (double xi : xs) {
+                x = xi;
+                boolean isHit = shotHandler.isInside(x, y, r);
+                if (shotHandler.isYValid(y)) {
+                    long date = (new Date()).getTime();
+                    String currentTime = sdf.format(date);
+                    Shot newShot = new Shot(
+                            decimalTransform(x, 2),
+                            decimalTransform(y, 2),
+                            decimalTransform(r, 2),
+                            isHit,
+                            currentTime
+                    );
+
+                    shotResults.getResults().add(newShot);
+                    dbHandler.create(newShot);
+
+                    System.out.println(newShot);
+                    System.out.println(shotResults.getResults());
+
+                } else System.out.println("Invalid input!");
+            }
+
+        } catch (ValidatorException ve) {
+            FacesContext.getCurrentInstance().addMessage(null, ve.getFacesMessage());
+            System.out.println("Ошибка валидации: " + ve.getFacesMessage().getSummary());
+        } catch (Exception e) {
+            System.out.println("Неожиданная ошибка: " + e.getMessage());
         }
     }
 

@@ -9,7 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="интереснее с валидацией" />
+    <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="работает но без валидации я думаю">
+      <change afterPath="$PROJECT_DIR$/src/main/java/mbean/FormBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/converter/YCoordinateConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/converter/YCoordinateConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mbean/ShotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mbean/ShotController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/ShotHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/ShotHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validators/CheckboxGroupValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validators/CustomDoubleRangeValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/onclick_event_handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/onclick_event_handler.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -560,7 +569,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731724970348</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="работает но без валидации я думаю">
+      <option name="closed" value="true" />
+      <created>1731727584220</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1731727584220</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -593,6 +610,7 @@
     <MESSAGE value="ошибку нашел, пытаюсь исправить" />
     <MESSAGE value="ошибку исправил" />
     <MESSAGE value="интереснее с валидацией" />
-    <option name="LAST_COMMIT_MESSAGE" value="интереснее с валидацией" />
+    <MESSAGE value="работает но без валидации я думаю" />
+    <option name="LAST_COMMIT_MESSAGE" value="работает но без валидации я думаю" />
   </component>
 </project>
