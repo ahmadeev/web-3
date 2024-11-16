@@ -9,11 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="исправил проблему загрузки и добавил график функцией">
+    <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="добавил инпуты по заданию, ищу ошибку с графиком">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mbean/ShotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mbean/ShotController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/InputShot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/InputShot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/submit_and_reset_buttons_handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/submit_and_reset_buttons_handler.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,7 +253,7 @@
       <workItem from="1731529011486" duration="5000" />
       <workItem from="1731586608345" duration="8379000" />
       <workItem from="1731604652115" duration="9107000" />
-      <workItem from="1731713677612" duration="4673000" />
+      <workItem from="1731713677612" duration="6123000" />
     </task>
     <task id="LOCAL-00001" summary="meow">
       <option name="closed" value="true" />
@@ -528,7 +527,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731614081186</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="добавил инпуты по заданию, ищу ошибку с графиком">
+      <option name="closed" value="true" />
+      <created>1731718554394</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1731718554394</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -557,6 +564,7 @@
     <MESSAGE value="исправил DBHandler.java" />
     <MESSAGE value="исправил еще что-то" />
     <MESSAGE value="исправил проблему загрузки и добавил график функцией" />
-    <option name="LAST_COMMIT_MESSAGE" value="исправил проблему загрузки и добавил график функцией" />
+    <MESSAGE value="добавил инпуты по заданию, ищу ошибку с графиком" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил инпуты по заданию, ищу ошибку с графиком" />
   </component>
 </project>

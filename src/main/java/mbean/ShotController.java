@@ -23,7 +23,7 @@ public class ShotController {
     @Getter @Setter
     private InputShot inputShot = new InputShot();
 
-    private final SimpleDateFormat sdf;
+    private final SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
 
     //  не является мбином, должен существовать в одном экземляре
     //  аннотации @jakarta.inject.Inject и @jakarta.inject.Singleton
@@ -45,7 +45,6 @@ public class ShotController {
         inputShot.setX(new BigDecimal("0.0"));
         inputShot.setY(0.0);
         inputShot.setR(new BigDecimal("2.0"));
-        sdf = new SimpleDateFormat("HH:mm:ss");
     }
 
     public void getManageRequest() {

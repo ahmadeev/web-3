@@ -1,15 +1,22 @@
 let submit = document.querySelector('.form_submit_button')
 submit.addEventListener("click", function() {
-    let xInput = parseFloat(document.querySelector('#form_x_container input[type="hidden"]').value)
+    // для x надо придумать что-то
+    // let xInput = parseFloat(document.querySelector('#form_x_container input[type="hidden"]').value)
+    let xInput = document.querySelectorAll('div#form_x_container input[type="checkbox"]:checked')
     let yInput = parseFloat(document.querySelector('.form_input_y').value)
     let RInput = parseFloat(document.querySelector('.slider_input').value)
 
-    if (isValid(xInput, yInput, RInput)) {
+    if (xInput.length !== 0 && isYValid(yInput) && isRValid(RInput)) {
         observer.observe(document.querySelector('#centerContent'), {
             childList : true,
             subtree: true
         })
-    } else alert('Coordinates are not valid!' + ' (x: ' + xInput.toFixed(2) + ', y: ' + yInput.toFixed(2) + ', R: ' + RInput.toFixed(2) + ')')
+    } else alert(
+        'Coordinates are not valid!\n' +
+        'x must be selected,\n' +
+        'y must be lower than 5 and greater than -3,\n' +
+        'r must be selected.'
+    )
 })
 
 const ZERO_TO_R_OFFSET = 80
