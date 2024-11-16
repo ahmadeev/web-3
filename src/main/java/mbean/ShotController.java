@@ -96,24 +96,6 @@ public class ShotController {
         }
     }
 
-    public void validateX(FacesContext context, UIComponent component, Object value) {
-        ArrayList<Double> xs = new ArrayList<>();
-        if (inputShot.getX1()) xs.add(-2.0);
-        if (inputShot.getX2()) xs.add(-1.5);
-        if (inputShot.getX3()) xs.add(-1.0);
-        if (inputShot.getX4()) xs.add(-0.5);
-        if (inputShot.getX5()) xs.add(0.0);
-        if (inputShot.getX6()) xs.add(0.5);
-
-        System.out.println(Arrays.toString(xs.toArray()));
-
-        if (xs.isEmpty()) {
-            System.out.println("pupupu");
-            FacesMessage message = new FacesMessage("Please, select at least one checkbox!");
-            throw new ValidatorException(message);
-        }
-    }
-
     private double decimalTransform(double number, int decimals) {
         double scale = Math.pow(10, decimals);
         number = Math.ceil(number * scale) / scale;
