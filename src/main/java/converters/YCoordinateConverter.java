@@ -1,4 +1,4 @@
-package converter;
+package converters;
 
 import jakarta.faces.application.FacesMessage;
 import jakarta.faces.component.UIComponent;

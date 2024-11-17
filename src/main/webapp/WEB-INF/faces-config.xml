@@ -21,6 +21,42 @@
         </navigation-case>
     </navigation-rule>
 
+    <managed-bean>
+        <managed-bean-name>pageError</managed-bean-name>
+        <managed-bean-class>mbean.PageError</managed-bean-class>
+        <managed-bean-scope>view</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>shotController</managed-bean-name>
+        <managed-bean-class>mbean.ShotController</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+        <managed-property>
+            <property-name>dbHandler</property-name>
+            <value>#{dbHandler}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>shotResults</property-name>
+            <value>#{shotResults}</value>
+        </managed-property>
+    </managed-bean>
+
+    <managed-bean eager="true">
+        <managed-bean-name>dbHandler</managed-bean-name>
+        <managed-bean-class>db.DBHandler</managed-bean-class>
+        <managed-bean-scope>application</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean eager="true">
+        <managed-bean-name>shotResults</managed-bean-name>
+        <managed-bean-class>mbean.ShotResults</managed-bean-class>
+        <managed-bean-scope>application</managed-bean-scope>
+        <managed-property>
+            <property-name>dbHandler</property-name>
+            <value>#{dbHandler}</value>
+        </managed-property>
+    </managed-bean>
+
 <!--    не работает мне кажется
     <validator>
         <validator-id>customDoubleRangeValidator</validator-id>

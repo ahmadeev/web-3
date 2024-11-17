@@ -1,13 +1,9 @@
 package db;
 
-import jakarta.faces.bean.ApplicationScoped;
-import jakarta.faces.bean.ManagedBean;
 import jakarta.persistence.*;
 import jakarta.transaction.Transactional;
 import entity.Shot;
 
-@ManagedBean(eager = true)
-@ApplicationScoped
 public class DBHandler {
 
     public DBHandler() {

@@ -3,12 +3,7 @@ package mbean;
 import db.DBHandler;
 import entity.Shot;
 import jakarta.faces.application.FacesMessage;
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ManagedProperty;
-import jakarta.faces.bean.RequestScoped;
-import jakarta.faces.component.UIComponent;
 import jakarta.faces.context.FacesContext;
-import jakarta.faces.convert.ConverterException;
 import jakarta.faces.validator.ValidatorException;
 import jakarta.inject.Inject;
 import lombok.Getter;
@@ -19,11 +14,8 @@ import util.ShotHandler;
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 
-@ManagedBean(name="shotController")
-@RequestScoped
 public class ShotController {
     @Getter @Setter
     private InputShot inputShot = new InputShot();
@@ -35,14 +27,11 @@ public class ShotController {
     @Inject
     private ShotHandler shotHandler;
 
-    //  инъекция с помощью средств jsf, чтобы избежать повторных инициализаций (возможно баг)
-    @Getter @Setter
-    @ManagedProperty(value = "#{dBHandler}")
-    private DBHandler dbHandler;
-
-    @Getter @Setter
-    @ManagedProperty(value = "#{shotResults}")
+    @Setter
     private ShotResults shotResults;
+
+    @Setter
+    private DBHandler dbHandler;
 
     public ShotController() {
         System.out.println("ShotController initialized");
@@ -53,9 +42,7 @@ public class ShotController {
     }
 
     public void getManageRequest() {
-
         try {
-
             System.out.println(inputShot.toString());
 
             double x;

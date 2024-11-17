@@ -1,8 +1,5 @@
 package mbean;
 
-import jakarta.faces.bean.ManagedBean;
-
-@ManagedBean(name = "pageError", eager = true)
 public class PageError {
     public PageError() {
         System.out.println("PageError bean started!");

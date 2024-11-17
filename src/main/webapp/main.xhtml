@@ -99,7 +99,7 @@
 
              <div id="centerContent">
 
-                 <p:dataTable id="tableResults" value="#{shotResults.results}" var="shot" sortMode="single"
+                 <p:dataTable id="tableResults" value="#{applicationScope.shotResults.results}" var="shot" sortMode="single"
                               styleClass="tableResults" style="margin-bottom: 15px; margin-top: 15px; border-color: black;">
                      <p:column headerText="X" style="text-align: center">
                          <h:outputText value="#{shot.x}"/>

@@ -3,22 +3,17 @@ package mbean;
 import db.DBHandler;
 import entity.Shot;
 import jakarta.annotation.PostConstruct;
-import jakarta.faces.bean.ApplicationScoped;
-import jakarta.faces.bean.ManagedBean;
-import jakarta.inject.Inject;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 
-@ManagedBean(name = "shotResults", eager = true)
-@ApplicationScoped
+@Setter
 public class ShotResults implements Serializable {
-    @Getter @Setter
+    @Getter
     private ArrayList<Shot> results;
 
-    @Inject
     private DBHandler dbHandler;
 
     public ShotResults() {
