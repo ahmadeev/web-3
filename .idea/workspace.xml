@@ -9,12 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="конфиг в faces-config.xml">
+    <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="удалены ненужные стили">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/db/DBHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/DBHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Shot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Shot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mbean/ShotResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mbean/ShotResults.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,6 +260,7 @@
       <workItem from="1731713677612" duration="12100000" />
       <workItem from="1731811261599" duration="2675000" />
       <workItem from="1731813963893" duration="4718000" />
+      <workItem from="1731820916936" duration="837000" />
     </task>
     <task id="LOCAL-00001" summary="meow">
       <option name="closed" value="true" />
@@ -617,7 +614,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731814903282</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="перевел на hibernate">
+      <option name="closed" value="true" />
+      <created>1731820194741</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1731820194741</updated>
+    </task>
+    <task id="LOCAL-00046" summary="удалены ненужные стили">
+      <option name="closed" value="true" />
+      <created>1731820339343</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1731820339343</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -656,6 +669,8 @@
     <MESSAGE value="надо причесать код, но уже работает" />
     <MESSAGE value="улучшение пользовательского опыта!!!" />
     <MESSAGE value="конфиг в faces-config.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="конфиг в faces-config.xml" />
+    <MESSAGE value="перевел на hibernate" />
+    <MESSAGE value="удалены ненужные стили" />
+    <option name="LAST_COMMIT_MESSAGE" value="удалены ненужные стили" />
   </component>
 </project>
