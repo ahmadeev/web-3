@@ -1,9 +1,13 @@
 package db;
 
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Named;
 import jakarta.persistence.*;
 import jakarta.transaction.Transactional;
 import entity.Shot;
 
+@Named
+@ApplicationScoped
 public class DBHandler {
 
     public DBHandler() {

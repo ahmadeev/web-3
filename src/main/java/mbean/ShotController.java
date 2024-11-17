@@ -30,7 +30,7 @@ public class ShotController {
     @Setter
     private ShotResults shotResults;
 
-    @Setter
+    @Inject
     private DBHandler dbHandler;
 
     public ShotController() {
@@ -88,9 +88,9 @@ public class ShotController {
                     );
 
                     shotResults.getResults().add(newShot);
-                    dbHandler.create(newShot);
-
                     System.out.println(newShot);
+
+                    dbHandler.create(newShot);
                     System.out.println(shotResults.getResults());
 
                 } else System.out.println("Invalid input!");

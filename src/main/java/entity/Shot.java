@@ -27,7 +27,7 @@ public class Shot {
     private boolean isHit;
 
     @Setter
-    @Column(nullable = false, name = "currentTime")
+    @Column(nullable = false, name = "current_time")
     private String currentTime;
 
     public Shot() {

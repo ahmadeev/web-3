@@ -9,18 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="улучшение пользовательского опыта!!!">
-      <change afterPath="$PROJECT_DIR$/Notes.java" afterDir="false" />
+    <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="конфиг в faces-config.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/converter/YCoordinateConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/converters/YCoordinateConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/db/DBHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/DBHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mbean/FormBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mbean/PageError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mbean/PageError.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Shot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Shot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mbean/ShotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mbean/ShotController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mbean/ShotResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mbean/ShotResults.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/ShotHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/ShotHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -269,7 +267,7 @@
       <workItem from="1731604652115" duration="9107000" />
       <workItem from="1731713677612" duration="12100000" />
       <workItem from="1731811261599" duration="2675000" />
-      <workItem from="1731813963893" duration="709000" />
+      <workItem from="1731813963893" duration="4718000" />
     </task>
     <task id="LOCAL-00001" summary="meow">
       <option name="closed" value="true" />
@@ -615,7 +613,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731812278510</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="конфиг в faces-config.xml">
+      <option name="closed" value="true" />
+      <created>1731814903282</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1731814903282</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -653,6 +659,7 @@
     <MESSAGE value="починил, жсф г" />
     <MESSAGE value="надо причесать код, но уже работает" />
     <MESSAGE value="улучшение пользовательского опыта!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="улучшение пользовательского опыта!!!" />
+    <MESSAGE value="конфиг в faces-config.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="конфиг в faces-config.xml" />
   </component>
 </project>

@@ -3,17 +3,18 @@ package mbean;
 import db.DBHandler;
 import entity.Shot;
 import jakarta.annotation.PostConstruct;
+import jakarta.inject.Inject;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 
-@Setter
 public class ShotResults implements Serializable {
-    @Getter
+    @Getter @Setter
     private ArrayList<Shot> results;
 
+    @Inject
     private DBHandler dbHandler;
 
     public ShotResults() {
