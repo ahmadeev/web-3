@@ -54,6 +54,11 @@ public class ShotController {
                 throw new ValidatorException(msg);
             }
 
+            if (!shotHandler.isYValid(y)) {
+                FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "", "Y: Невалидное значение!");
+                throw new ValidatorException(msg);
+            }
+
             String formSource = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("formSource");
             ArrayList<Double> xs = new ArrayList<>();
 
@@ -76,24 +81,22 @@ public class ShotController {
             for (double xi : xs) {
                 x = xi;
                 boolean isHit = shotHandler.isInside(x, y, r);
-                if (shotHandler.isYValid(y)) {
-                    long date = (new Date()).getTime();
-                    String currentTime = sdf.format(date);
-                    Shot newShot = new Shot(
-                            decimalTransform(x, 2),
-                            decimalTransform(y, 2),
-                            decimalTransform(r, 2),
-                            isHit,
-                            currentTime
-                    );
 
-                    shotResults.getResults().add(newShot);
-                    System.out.println(newShot);
+                long date = (new Date()).getTime();
+                String currentTime = sdf.format(date);
+                Shot newShot = new Shot(
+                        decimalTransform(x, 2),
+                        decimalTransform(y, 2),
+                        decimalTransform(r, 2),
+                        isHit,
+                        currentTime
+                );
 
-                    dbHandler.create(newShot);
-                    System.out.println(shotResults.getResults());
+                shotResults.getResults().add(newShot);
+                // System.out.println(newShot);
+                // System.out.println(shotResults.getResults());
 
-                } else System.out.println("Invalid input!");
+                dbHandler.create(newShot);
             }
 
         } catch (ValidatorException ve) {

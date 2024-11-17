@@ -14,14 +14,14 @@ public class YCoordinateConverter implements Converter<Double> {
     @Override
     public Double getAsObject(FacesContext facesContext, UIComponent uiComponent, String y) {
         if (y == null || y.isEmpty()) {
-            System.out.println("Y: Значение отсутствует!");
+            // System.out.println("Y: Значение отсутствует!");
             FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "", "Y: Значение отсутствует!");
             facesContext.addMessage(null, msg);
             throw new ConverterException(msg);
             //  раньше return null;
         }
         if (!Pattern.matches("(?:-[210]|\\+?[01234])(?:[.,]\\d{1,15})?", y)) {
-            System.out.println("Y: Значение не подходит под диапазон (-3, 5).");
+            // System.out.println("Y: Значение не подходит под диапазон (-3, 5).");
             FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "", "Y: Значение не подходит под диапазон (-3, 5).");
             facesContext.addMessage(null, msg);
             throw new ConverterException(msg);
