@@ -45,6 +45,7 @@ function submitButton() {
             childList : true,
             subtree: true
         })
+        console.log(`form: ${xInput}, ${yInput}, ${RInput}`)
     } /*else alert(
         'Coordinates are not valid!\n' +
         'x must be selected,\n' +

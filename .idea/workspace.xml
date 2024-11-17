@@ -9,8 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="починил, жсф г">
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.xhtml" afterDir="false" />
+    <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="надо причесать код, но уже работает">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/onclick_event_handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/onclick_event_handler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/submit_and_reset_buttons_handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/submit_and_reset_buttons_handler.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,6 +260,7 @@
       <workItem from="1731586608345" duration="8379000" />
       <workItem from="1731604652115" duration="9107000" />
       <workItem from="1731713677612" duration="12100000" />
+      <workItem from="1731811261599" duration="792000" />
     </task>
     <task id="LOCAL-00001" summary="meow">
       <option name="closed" value="true" />
@@ -587,7 +590,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731734787670</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="надо причесать код, но уже работает">
+      <option name="closed" value="true" />
+      <created>1731735187977</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1731735187977</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -623,6 +634,7 @@
     <MESSAGE value="работает но без валидации я думаю" />
     <MESSAGE value="пять что-то" />
     <MESSAGE value="починил, жсф г" />
-    <option name="LAST_COMMIT_MESSAGE" value="починил, жсф г" />
+    <MESSAGE value="надо причесать код, но уже работает" />
+    <option name="LAST_COMMIT_MESSAGE" value="надо причесать код, но уже работает" />
   </component>
 </project>

@@ -35,6 +35,7 @@ svg.addEventListener('click', (event) => {
             document.querySelector('.input_y').value = yInput
             document.querySelector('.input_r').value = RInput
             document.querySelector('.button-hidden').click()
+            console.log(`graph: ${xInput}, ${yInput}, ${RInput}`)
             console.log("Запрос был отправлен!")
         } //else alert('Coordinates are not valid!' + ' (x: ' + xInput.toFixed(2) + ', y: ' + yInput.toFixed(2) + ', R: ' + RInput.toFixed(2) + ')')
     } //else alert('R is not set!')
