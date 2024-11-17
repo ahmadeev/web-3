@@ -1,37 +1,22 @@
 package db;
 
-import jakarta.enterprise.context.ApplicationScoped;
-import jakarta.inject.Named;
+import jakarta.ejb.Stateless;
 import jakarta.persistence.*;
-import jakarta.transaction.Transactional;
 import entity.Shot;
 
-@Named
-@ApplicationScoped
+@Stateless
 public class DBHandler {
+    @PersistenceContext
+    protected EntityManager em;
 
-    public DBHandler() {
-        System.out.println("DBHandler initialized");
-    }
-
-    private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("default");
-    private final EntityManager em = emf.createEntityManager();
-
-    @Transactional
-    public Shot create(Shot shot) {
-        em.getTransaction().begin();
+    public void create(Shot shot) {
         em.persist(shot);
-        em.getTransaction().commit();
-        return shot;
     }
 
-    @Transactional
-    public void resetTable() {
-        em.getTransaction().begin();
+    public void clear() {
         Query query = em.createQuery(
                 "DELETE FROM Shot"
         );
         System.out.println("Deleted " + query.executeUpdate() + " rows");
-        em.getTransaction().commit();
     }
 }

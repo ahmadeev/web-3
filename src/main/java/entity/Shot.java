@@ -27,25 +27,11 @@ public class Shot {
     private boolean isHit;
 
     @Setter
-    @Column(nullable = false, name = "current_time")
+    @Column(nullable = false, name = "curr_time")   //  возникала какая-то ошибка при именовании столбца current_time
     private String currentTime;
 
     public Shot() {
         System.out.println("Object Shot created");
-    }
-
-    public Shot(Shot shot) {
-        this.x = shot.x;
-        this.y = shot.y;
-        this.R = shot.R;
-        this.isHit = shot.isHit;
-    }
-
-    public Shot(double x, double y, double r, boolean isHit) {
-        this.x = x;
-        this.y = y;
-        this.R = r;
-        this.isHit = isHit;
     }
 
     public Shot(double x, double y, double r, boolean isHit, String currentTime) {
