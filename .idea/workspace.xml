@@ -9,8 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="диалект">
+    <list default="true" id="c1db2ff0-5a0c-41b8-a27f-c459b0040051" name="Changes" comment="убрал лишние выводы в консоль">
+      <change afterPath="$PROJECT_DIR$/src/main/java/converters/RCoordinateConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mbean/ShotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mbean/ShotController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/InputShot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/InputShot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validators/CustomDoubleRangeValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +83,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="converters" />
       <recent name="beans" />
     </key>
   </component>
@@ -260,7 +267,7 @@
       <workItem from="1731713677612" duration="12100000" />
       <workItem from="1731811261599" duration="2675000" />
       <workItem from="1731813963893" duration="4718000" />
-      <workItem from="1731820916936" duration="1828000" />
+      <workItem from="1731820916936" duration="5484000" />
     </task>
     <task id="LOCAL-00001" summary="meow">
       <option name="closed" value="true" />
@@ -638,7 +645,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731821790395</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="убрал лишние выводы в консоль">
+      <option name="closed" value="true" />
+      <created>1731823432835</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1731823432835</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -680,6 +695,7 @@
     <MESSAGE value="перевел на hibernate" />
     <MESSAGE value="удалены ненужные стили" />
     <MESSAGE value="диалект" />
-    <option name="LAST_COMMIT_MESSAGE" value="диалект" />
+    <MESSAGE value="убрал лишние выводы в консоль" />
+    <option name="LAST_COMMIT_MESSAGE" value="убрал лишние выводы в консоль" />
   </component>
 </project>

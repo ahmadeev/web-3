@@ -36,26 +36,25 @@ public class ShotController {
     public ShotController() {
         System.out.println("ShotController initialized");
 
-        inputShot.setX(new BigDecimal("0.0"));
+        inputShot.setX(0.0);
         inputShot.setY(0.0);
-        inputShot.setR(new BigDecimal("2.0"));
+        inputShot.setR(2.0);
     }
 
     public void getManageRequest() {
         try {
-            System.out.println(inputShot.toString());
-
+            // надо сделать валидацию до превращения в double
             double x;
             double y = inputShot.getY();
-            double r = inputShot.getR().doubleValue();
-
-            if (!shotHandler.isRValidStrict(r) || !shotHandler.isRValid(r)) {
-                FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "", "R: Невалидное значение!");
-                throw new ValidatorException(msg);
-            }
+            double r = inputShot.getR();
 
             if (!shotHandler.isYValid(y)) {
                 FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "", "Y: Невалидное значение!");
+                throw new ValidatorException(msg);
+            }
+
+            if (!shotHandler.isRValidStrict(r) || !shotHandler.isRValid(r)) {
+                FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "", "R: Невалидное значение!");
                 throw new ValidatorException(msg);
             }
 
@@ -70,7 +69,7 @@ public class ShotController {
                 if (inputShot.getX5()) xs.add(0.0);
                 if (inputShot.getX6()) xs.add(0.5);
             } else if (formSource.equals("graph")) {
-                xs.add(inputShot.getX().doubleValue());
+                xs.add(inputShot.getX());
             }
 
             if (xs.isEmpty()) {
@@ -93,9 +92,6 @@ public class ShotController {
                 );
 
                 shotResults.getResults().add(newShot);
-                // System.out.println(newShot);
-                // System.out.println(shotResults.getResults());
-
                 dbHandler.create(newShot);
             }
 

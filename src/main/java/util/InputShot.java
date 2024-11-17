@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 @Setter
 @AllArgsConstructor
 public class InputShot {
-    private BigDecimal x;
+    private Double x;
     private Boolean x1 = false;
     private Boolean x2 = false;
     private Boolean x3 = false;
@@ -18,7 +18,7 @@ public class InputShot {
     private Boolean x5 = false;
     private Boolean x6 = false;
     private Double y;
-    private BigDecimal R;
+    private Double R;
 
     public InputShot() {
         System.out.println("Object InputShot created");

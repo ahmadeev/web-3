@@ -42,10 +42,4 @@
         <managed-bean-class>mbean.ShotResults</managed-bean-class>
         <managed-bean-scope>application</managed-bean-scope>
     </managed-bean>
-
-<!--    не работает мне кажется
-    <validator>
-        <validator-id>customDoubleRangeValidator</validator-id>
-        <validator-class>validators.CustomDoubleRangeValidator</validator-class>
-    </validator>-->
 </faces-config>
